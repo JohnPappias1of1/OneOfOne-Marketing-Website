@@ -137,7 +137,7 @@ export default function ContactPage() {
               <div className="glass-card p-4 lg:p-8">
                 <div 
                   className="calendly-inline-widget" 
-                  data-url="https://calendly.com/john-oneofonemarketing/30min?hide_gdpr_banner=1&background_color=111111&text_color=f2f2f2&primary_color=eab308"
+                  data-url="https://calendly.com/john-oneofonemarketing/30min"
                   style={{ minWidth: '320px', height: '700px' }}
                 />
               </div>
