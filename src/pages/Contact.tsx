@@ -5,27 +5,15 @@ import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
 
 const contactInfo = [
   {
-    icon: Phone,
-    label: "Phone",
-    value: "(123) 456-7890",
-    href: "tel:+1234567890",
-  },
-  {
     icon: Mail,
     label: "Email",
-    value: "hello@oneofonemarketing.com",
-    href: "mailto:hello@oneofonemarketing.com",
+    value: "john@oneofonemarketing.com",
+    href: "mailto:john@oneofonemarketing.com",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Los Angeles, CA",
-    href: null,
-  },
-  {
-    icon: Clock,
-    label: "Hours",
-    value: "Mon-Fri: 9AM-6PM PST",
+    value: "Dallas, TX United States",
     href: null,
   },
 ];
