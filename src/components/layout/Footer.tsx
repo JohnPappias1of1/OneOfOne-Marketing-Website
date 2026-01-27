@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
+import { Mail, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
 
 const navigation = {
   services: [
@@ -110,26 +110,17 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+1234567890"
-                  className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-primary" />
-                  (123) 456-7890
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:hello@oneofonemarketing.com"
+                  href="mailto:john@oneofonemarketing.com"
                   className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4 text-primary" />
-                  hello@oneofonemarketing.com
+                  john@oneofonemarketing.com
                 </a>
               </li>
               <li>
                 <span className="flex items-start gap-3 text-sm text-muted-foreground">
                   <MapPin className="w-4 h-4 text-primary mt-0.5" />
-                  <span>Los Angeles, CA<br />United States</span>
+                  <span>Dallas, TX<br />United States</span>
                 </span>
               </li>
             </ul>
