@@ -122,10 +122,10 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Calendar Embed Placeholder */}
+        {/* Calendar Embed */}
         <section className="py-12 lg:py-20 bg-card">
           <div className="section-container">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <h2 className="font-display text-2xl lg:text-3xl font-bold mb-4">
                 Prefer to Book Directly?
               </h2>
@@ -133,16 +133,13 @@ export default function ContactPage() {
                 Skip the form and pick a time that works for you.
               </p>
               
-              {/* Calendar Placeholder */}
-              <div className="glass-card p-8 lg:p-12">
-                <div className="border-2 border-dashed border-border rounded-xl p-12 text-center">
-                  <p className="text-muted-foreground">
-                    [Calendar Booking Widget Placeholder]
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Calendly or similar embed goes here
-                  </p>
-                </div>
+              {/* Calendly Inline Embed */}
+              <div className="glass-card p-4 lg:p-8">
+                <div 
+                  className="calendly-inline-widget" 
+                  data-url="https://calendly.com/john-oneofonemarketing/30min?hide_gdpr_banner=1&background_color=111111&text_color=f2f2f2&primary_color=eab308"
+                  style={{ minWidth: '320px', height: '700px' }}
+                />
               </div>
             </div>
           </div>
