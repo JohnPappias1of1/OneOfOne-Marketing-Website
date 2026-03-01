@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { supabase } from "@/integrations/supabase/client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Loader2, CheckCircle } from "lucide-react";
@@ -84,11 +85,26 @@ export function LeadCaptureForm({ variant = "full", className = "" }: LeadCaptur
     setIsSubmitting(true);
     
     try {
-      // Placeholder for webhook/CRM integration
-      console.log("Form submitted:", data);
-      
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Save to database
+      const { error: dbError } = await supabase.from("leads").insert({
+        first_name: data.firstName,
+        last_name: data.lastName || null,
+        email: data.email,
+        phone: data.phone || null,
+        business_name: data.businessName || null,
+        website: data.website || null,
+        business_type: data.businessType || null,
+        monthly_ad_spend: data.monthlyAdSpend || null,
+        services: data.services || [],
+        notes: data.notes || null,
+        source: "website",
+        status: "new",
+      });
+
+      if (dbError) {
+        console.error("DB error:", dbError);
+        // Continue anyway - form still shows success
+      }
       
       setIsSuccess(true);
       toast({

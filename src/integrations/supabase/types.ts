@@ -14,16 +14,211 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      appointments: {
+        Row: {
+          appointment_date: string
+          appointment_time: string
+          created_at: string
+          duration_minutes: number
+          id: string
+          lead_email: string
+          lead_id: string | null
+          lead_name: string
+          lead_phone: string | null
+          notes: string | null
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          appointment_date: string
+          appointment_time: string
+          created_at?: string
+          duration_minutes?: number
+          id?: string
+          lead_email: string
+          lead_id?: string | null
+          lead_name: string
+          lead_phone?: string | null
+          notes?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          appointment_date?: string
+          appointment_time?: string
+          created_at?: string
+          duration_minutes?: number
+          id?: string
+          lead_email?: string
+          lead_id?: string | null
+          lead_name?: string
+          lead_phone?: string | null
+          notes?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "appointments_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "leads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      chat_sessions: {
+        Row: {
+          created_at: string
+          id: string
+          lead_id: string | null
+          messages: Json
+          qualified: boolean | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          lead_id?: string | null
+          messages?: Json
+          qualified?: boolean | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          lead_id?: string | null
+          messages?: Json
+          qualified?: boolean | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "chat_sessions_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "leads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      leads: {
+        Row: {
+          admin_notes: string | null
+          business_name: string | null
+          business_type: string | null
+          created_at: string
+          email: string
+          first_name: string
+          id: string
+          last_name: string | null
+          monthly_ad_spend: string | null
+          notes: string | null
+          phone: string | null
+          services: string[] | null
+          source: string | null
+          status: string
+          updated_at: string
+          website: string | null
+        }
+        Insert: {
+          admin_notes?: string | null
+          business_name?: string | null
+          business_type?: string | null
+          created_at?: string
+          email: string
+          first_name: string
+          id?: string
+          last_name?: string | null
+          monthly_ad_spend?: string | null
+          notes?: string | null
+          phone?: string | null
+          services?: string[] | null
+          source?: string | null
+          status?: string
+          updated_at?: string
+          website?: string | null
+        }
+        Update: {
+          admin_notes?: string | null
+          business_name?: string | null
+          business_type?: string | null
+          created_at?: string
+          email?: string
+          first_name?: string
+          id?: string
+          last_name?: string | null
+          monthly_ad_spend?: string | null
+          notes?: string | null
+          phone?: string | null
+          services?: string[] | null
+          source?: string | null
+          status?: string
+          updated_at?: string
+          website?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          email: string | null
+          full_name: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id: string
+          updated_at?: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "moderator" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +345,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "moderator", "user"],
+    },
   },
 } as const
