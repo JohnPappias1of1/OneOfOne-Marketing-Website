@@ -13,7 +13,7 @@ export function SEOHead({
   title,
   description,
   canonical,
-  ogImage = "/og-image.jpg",
+  ogImage = "/og-image.png",
   ogType = "website",
   schema,
 }: SEOHeadProps) {
