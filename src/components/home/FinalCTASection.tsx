@@ -30,10 +30,10 @@ export function FinalCTASection() {
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <a href="tel:+1234567890">
+            <a href="tel:+16317665791">
               <Button variant="outline" className="btn-outline w-full sm:w-auto">
                 <Phone className="w-4 h-4 mr-2" />
-                Call (123) 456-7890
+                Call (631) 766-5791
               </Button>
             </a>
           </div>
