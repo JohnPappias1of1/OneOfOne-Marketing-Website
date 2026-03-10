@@ -256,6 +256,104 @@ export default function ContractorsLP() {
           </div>
         </section>
 
+        {/* Testimonials */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-center mb-4">
+              What Contractors Are Saying
+            </h2>
+            <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+              Real results from real contractors who trusted us to grow their business.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "Marcus T.",
+                  trade: "Roofing Contractor",
+                  location: "Dallas, TX",
+                  quote: "We went from 3-4 jobs a month to 22 booked jobs in our first 60 days. The lead quality is night and day compared to HomeAdvisor. This system actually works.",
+                  result: "22 jobs/mo in 60 days",
+                },
+                {
+                  name: "James R.",
+                  trade: "HVAC Company Owner",
+                  location: "Atlanta, GA",
+                  quote: "I was spending $5K/mo on Angi leads and closing maybe 10%. Now I'm getting homeowners calling ME, ready to book. Revenue is up 180% year-over-year.",
+                  result: "180% revenue increase",
+                },
+                {
+                  name: "Carlos M.",
+                  trade: "Plumbing Contractor",
+                  location: "Phoenix, AZ",
+                  quote: "The AI follow-up system alone is worth it. I used to lose half my leads because I couldn't call back fast enough. Now every lead gets a response in under 2 minutes.",
+                  result: "2x close rate",
+                },
+              ].map((t) => (
+                <div
+                  key={t.name}
+                  className="p-6 rounded-xl border border-border bg-card flex flex-col"
+                >
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-primary fill-primary" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                    "{t.quote}"
+                  </p>
+                  <div className="border-t border-border pt-4 mt-auto">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-bold text-sm">{t.name}</p>
+                        <p className="text-xs text-muted-foreground">{t.trade} · {t.location}</p>
+                      </div>
+                      <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">
+                        {t.result}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Guarantee Section */}
+        <section className="py-16 md:py-20 bg-primary/5 border-y border-primary/20">
+          <div className="max-w-3xl mx-auto px-4 text-center">
+            <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
+              <Shield className="w-8 h-8 text-primary" />
+            </div>
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
+              Our <span className="text-primary">10-Job Guarantee</span>
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
+              We're so confident in our system that we put our money where our mouth is.
+              If we don't help you book at least <strong className="text-foreground">10 qualified jobs</strong> in
+              your first 90 days, <strong className="text-foreground">you don't pay. Period.</strong>
+            </p>
+            <div className="grid sm:grid-cols-3 gap-4 mt-8 text-sm">
+              {[
+                { label: "10+ Qualified Jobs", sub: "Booked on your calendar" },
+                { label: "90-Day Window", sub: "Plenty of time to see results" },
+                { label: "Zero Risk", sub: "You don't pay until we deliver" },
+              ].map((g) => (
+                <div key={g.label} className="p-4 rounded-lg border border-primary/20 bg-card">
+                  <p className="font-bold text-foreground">{g.label}</p>
+                  <p className="text-muted-foreground text-xs mt-1">{g.sub}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8">
+              <Button onClick={scrollToForm} className="btn-primary text-base px-8 py-5 h-auto">
+                Claim Your Risk-Free Growth Plan →
+              </Button>
+            </div>
+          </div>
+        </section>
+
         {/* Lead Form Section */}
         <section id="apply-form" className="py-16 md:py-24">
           <div className="max-w-2xl mx-auto px-4">
