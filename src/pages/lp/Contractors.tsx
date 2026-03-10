@@ -327,17 +327,17 @@ export default function ContractorsLP() {
               <Shield className="w-8 h-8 text-primary" />
             </div>
             <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
-              Our <span className="text-primary">10-Job Guarantee</span>
+              Our <span className="text-primary">20-Job Guarantee</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
               We're so confident in our system that we put our money where our mouth is.
-              If we don't help you book at least <strong className="text-foreground">10 qualified jobs</strong> in
-              your first 90 days, <strong className="text-foreground">you don't pay. Period.</strong>
+              If we don't help you book at least <strong className="text-foreground">20 qualified jobs</strong> in
+              your first 60 days, <strong className="text-foreground">you don't pay. Period.</strong>
             </p>
             <div className="grid sm:grid-cols-3 gap-4 mt-8 text-sm">
               {[
-                { label: "10+ Qualified Jobs", sub: "Booked on your calendar" },
-                { label: "90-Day Window", sub: "Plenty of time to see results" },
+                { label: "20+ Qualified Jobs", sub: "Booked on your calendar" },
+                { label: "60-Day Window", sub: "Fast, proven results" },
                 { label: "Zero Risk", sub: "You don't pay until we deliver" },
               ].map((g) => (
                 <div key={g.label} className="p-4 rounded-lg border border-primary/20 bg-card">
