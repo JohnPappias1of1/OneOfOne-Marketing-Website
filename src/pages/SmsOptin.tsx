@@ -30,10 +30,13 @@ const SmsOptin = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
+      const formData = new URLSearchParams();
+      formData.append("name", data.name);
+      formData.append("phone", data.phone);
+      formData.append("businessName", data.businessName);
       await fetch(GHL_WEBHOOK_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: formData,
         mode: "no-cors",
       });
       window.location.href = "https://oneofonesystems.com/contact";
