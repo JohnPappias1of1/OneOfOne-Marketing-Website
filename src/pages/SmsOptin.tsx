@@ -8,7 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { CheckCircle, MessageSquare, Shield } from "lucide-react";
 import { SEOHead } from "@/components/seo/SEOHead";
 
-const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/IbBPe6rBCbWUsygEJSjo/webhook-trigger/a3e3e32c-c083-4ab6-95a5-cb804d3f15ce";
+const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/IbBPe6rBCbWUsygEJSjo/webhook-trigger/c5e1a1a4-3bc8-42ce-97f9-6a8e2cfb6098";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
