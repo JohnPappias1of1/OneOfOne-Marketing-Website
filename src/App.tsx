@@ -14,6 +14,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import ContractorsLP from "./pages/lp/Contractors";
+import SmsOptin from "./pages/SmsOptin";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AdminLeads from "./pages/admin/Leads";
@@ -47,6 +48,7 @@ const App = () => (
             <Route path="/admin/chats" element={<AdminChatSessions />} />
             <Route path="/admin/team" element={<AdminTeam />} />
             <Route path="/lp/contractors" element={<ContractorsLP />} />
+            <Route path="/sms-optin" element={<SmsOptin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <ChatbotWidget />
