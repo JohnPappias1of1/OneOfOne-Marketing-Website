@@ -36,7 +36,7 @@ const SmsOptin = () => {
         body: JSON.stringify(data),
         mode: "no-cors",
       });
-      setSubmitted(true);
+      window.location.href = "https://oneofonesystems.com/contact";
     } catch {
       console.error("Submission failed");
     } finally {
