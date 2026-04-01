@@ -48,6 +48,7 @@ const App = () => (
             <Route path="/admin/chats" element={<AdminChatSessions />} />
             <Route path="/admin/team" element={<AdminTeam />} />
             <Route path="/lp/contractors" element={<ContractorsLP />} />
+            <Route path="/sms-optin" element={<SmsOptin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <ChatbotWidget />
