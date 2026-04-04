@@ -15,6 +15,7 @@ import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import ContractorsLP from "./pages/lp/Contractors";
 import SmsOptin from "./pages/SmsOptin";
+import ClientQuestionnaire from "./pages/ClientQuestionnaire";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AdminLeads from "./pages/admin/Leads";
