@@ -23,6 +23,7 @@ import AdminAppointments from "./pages/admin/Appointments";
 import AdminChatSessions from "./pages/admin/ChatSessions";
 import AdminTeam from "./pages/admin/Team";
 import { ChatbotWidget } from "./components/chatbot/ChatbotWidget";
+import { GhlStickyWidget } from "./components/GhlStickyWidget";
 
 const queryClient = new QueryClient();
 
