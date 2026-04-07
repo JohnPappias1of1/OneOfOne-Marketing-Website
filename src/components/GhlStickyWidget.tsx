@@ -27,7 +27,8 @@ export function GhlStickyWidget() {
           </div>
           <iframe
             src="https://api.oneofonesystems.com/widget/form/CoczR2UbrkbyvSztB50z"
-            style={{ width: "100%", height: "calc(100% - 48px)", border: "none" }}
+            style={{ width: "100%", height: "calc(100% - 48px)", border: "none", overflowY: "auto" }}
+            scrolling="yes"
             id="sticky-sidebar-left-CoczR2UbrkbyvSztB50z"
             data-layout='{"id":"INLINE"}'
             data-trigger-type="alwaysShow"
