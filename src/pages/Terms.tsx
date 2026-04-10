@@ -50,6 +50,21 @@ export default function TermsPage() {
                   Either party may terminate services with written notice as specified in individual client agreements. We work on month-to-month arrangements unless otherwise agreed.
                 </p>
 
+                <h2 className="font-display text-xl font-bold text-foreground mt-8">SMS/Text Messaging Terms</h2>
+                <p>
+                  By opting in to receive SMS/text messages from OneofOne Marketing, you agree to the following:
+                </p>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>You consent to receive recurring automated marketing and informational text messages from OneofOne Marketing at the phone number you provided.</li>
+                  <li>Consent is not required as a condition of purchasing any goods or services.</li>
+                  <li>Message frequency varies; up to 10 messages per month.</li>
+                  <li>Message and data rates may apply.</li>
+                  <li>You may opt out at any time by replying STOP. You will receive a one-time confirmation and no further messages.</li>
+                  <li>For help, reply HELP or email john@oneofonemarketing.com.</li>
+                  <li>We will not share your opt-in information or phone number with any third parties for their own marketing purposes.</li>
+                  <li>By opting in, you acknowledge that you have read and agree to our <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>.</li>
+                </ul>
+
                 <h2 className="font-display text-xl font-bold text-foreground mt-8">Changes to Terms</h2>
                 <p>
                   We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to our website.
@@ -57,7 +72,7 @@ export default function TermsPage() {
 
                 <h2 className="font-display text-xl font-bold text-foreground mt-8">Contact Us</h2>
                 <p>
-                  If you have questions about these Terms of Service, please contact us at hello@oneofonemarketing.com.
+                  If you have questions about these Terms of Service, please contact us at john@oneofonemarketing.com.
                 </p>
               </div>
             </div>
