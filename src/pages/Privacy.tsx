@@ -49,6 +49,16 @@ export default function PrivacyPage() {
                   <li><strong className="text-foreground">No Sharing:</strong> We do not sell, rent, or share your phone number or SMS opt-in information with third parties or affiliates for marketing purposes.</li>
                 </ul>
 
+                <h2 className="font-display text-xl font-bold text-foreground mt-8">Carrier Liability Disclaimer</h2>
+                <p>
+                  OneofOne Marketing and mobile carriers (including but not limited to AT&T, T-Mobile, Verizon, and Sprint) are not liable for delayed or undelivered messages. Delivery of SMS messages is subject to effective transmission by your mobile carrier.
+                </p>
+
+                <h2 className="font-display text-xl font-bold text-foreground mt-8">Age Restriction</h2>
+                <p>
+                  You must be at least 18 years of age to opt in to our SMS messaging program. By opting in, you confirm that you are 18 years of age or older. We do not knowingly collect information from individuals under 18.
+                </p>
+
                 <h2 className="font-display text-xl font-bold text-foreground mt-8">Information Sharing</h2>
                 <p>
                   We do not sell, trade, or otherwise transfer your personal information to outside parties except as described in this policy. We may share information with trusted third parties who assist us in operating our website or conducting our business.
