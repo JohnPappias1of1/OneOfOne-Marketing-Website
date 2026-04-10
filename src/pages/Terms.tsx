@@ -65,6 +65,16 @@ export default function TermsPage() {
                   <li>By opting in, you acknowledge that you have read and agree to our <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>.</li>
                 </ul>
 
+                <h2 className="font-display text-xl font-bold text-foreground mt-8">Carrier Liability Disclaimer</h2>
+                <p>
+                  OneofOne Marketing and mobile carriers (including but not limited to AT&T, T-Mobile, Verizon, and Sprint) are not liable for delayed or undelivered messages. Delivery of SMS messages is subject to effective transmission by your mobile carrier.
+                </p>
+
+                <h2 className="font-display text-xl font-bold text-foreground mt-8">Age Restriction</h2>
+                <p>
+                  You must be at least 18 years of age to opt in to our SMS messaging program. By opting in, you confirm that you are 18 years of age or older. We do not knowingly collect information from individuals under 18.
+                </p>
+
                 <h2 className="font-display text-xl font-bold text-foreground mt-8">Changes to Terms</h2>
                 <p>
                   We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to our website.
