@@ -35,7 +35,7 @@ const BookNow = () => {
             <div className="max-w-4xl mx-auto">
               <iframe
                 src="https://api.oneofonesystems.com/widget/booking/uNDDgOE7bK1v2TpURbK3"
-                style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "700px" }}
+                style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "1000px" }}
                 scrolling="no"
                 id="booking-page-uNDDgOE7bK1v2TpURbK3"
                 title="Book a Strategy Call"
