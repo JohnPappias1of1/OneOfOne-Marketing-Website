@@ -8,6 +8,7 @@ import { ResultsSection } from "@/components/home/ResultsSection";
 import { OfferSection } from "@/components/home/OfferSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { FinalCTASection } from "@/components/home/FinalCTASection";
+import { BookingSection } from "@/components/home/BookingSection";
 
 const faqs = [
   { question: "How much does it cost?", answer: "Our pricing is customized based on your needs and goals. Most clients invest between $2,500-$10,000/month depending on the services included." },
@@ -43,6 +44,7 @@ const Index = () => {
         <ProcessSection />
         <ResultsSection />
         <OfferSection />
+        <BookingSection />
         <FAQSection />
         <FinalCTASection />
       </Layout>
