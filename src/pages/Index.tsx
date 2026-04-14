@@ -44,6 +44,7 @@ const Index = () => {
         <ProcessSection />
         <ResultsSection />
         <OfferSection />
+        <BookingSection />
         <FAQSection />
         <FinalCTASection />
       </Layout>
