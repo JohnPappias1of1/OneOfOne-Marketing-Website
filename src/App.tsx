@@ -55,6 +55,7 @@ const App = () => (
             <Route path="/sms-optin" element={<SmsOptin />} />
             <Route path="/client-questionnaire" element={<ClientQuestionnaire />} />
             <Route path="/ghl-contact" element={<GhlContact />} />
+            <Route path="/book-now" element={<BookNow />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <ChatbotWidget />
