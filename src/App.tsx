@@ -17,6 +17,7 @@ import ContractorsLP from "./pages/lp/Contractors";
 import SmsOptin from "./pages/SmsOptin";
 import ClientQuestionnaire from "./pages/ClientQuestionnaire";
 import GhlContact from "./pages/GhlContact";
+import BookNow from "./pages/BookNow";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AdminLeads from "./pages/admin/Leads";
@@ -54,6 +55,7 @@ const App = () => (
             <Route path="/sms-optin" element={<SmsOptin />} />
             <Route path="/client-questionnaire" element={<ClientQuestionnaire />} />
             <Route path="/ghl-contact" element={<GhlContact />} />
+            <Route path="/book-now" element={<BookNow />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <ChatbotWidget />
