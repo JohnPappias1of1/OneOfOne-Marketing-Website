@@ -105,7 +105,33 @@ export function LeadCaptureForm({ variant = "full", className = "" }: LeadCaptur
         console.error("DB error:", dbError);
         // Continue anyway - form still shows success
       }
-      
+
+      // Send to GoHighLevel inbound webhook
+      try {
+        await fetch("https://services.leadconnectorhq.com/hooks/iHzub8lZ7JkGC1SLf02S/webhook-trigger/b39ab4b2-b163-4110-9bc5-9cf43aa11bfc", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            firstName: data.firstName,
+            lastName: data.lastName,
+            fullName: `${data.firstName} ${data.lastName}`.trim(),
+            email: data.email,
+            phone: data.phone,
+            businessName: data.businessName,
+            website: data.website,
+            businessType: data.businessType,
+            monthlyAdSpend: data.monthlyAdSpend,
+            services: data.services,
+            notes: data.notes,
+            source: "website-contact-form",
+            submittedAt: new Date().toISOString(),
+          }),
+        });
+      } catch (ghlError) {
+        console.error("GHL webhook error:", ghlError);
+        // Continue anyway - lead is already saved to DB
+      }
+
       setIsSuccess(true);
       toast({
         title: "Application Received!",
