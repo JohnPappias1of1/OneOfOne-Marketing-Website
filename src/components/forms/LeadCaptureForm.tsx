@@ -50,9 +50,13 @@ const businessTypes = [
 interface LeadCaptureFormProps {
   variant?: "full" | "compact";
   className?: string;
+  webhookUrl?: string;
+  source?: string;
 }
 
-export function LeadCaptureForm({ variant = "full", className = "" }: LeadCaptureFormProps) {
+const DEFAULT_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/iHzub8lZ7JkGC1SLf02S/webhook-trigger/b39ab4b2-b163-4110-9bc5-9cf43aa11bfc";
+
+export function LeadCaptureForm({ variant = "full", className = "", webhookUrl = DEFAULT_WEBHOOK_URL, source = "website-contact-form" }: LeadCaptureFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
