@@ -15,8 +15,8 @@ const ClientQuestionnaire = () => {
   return (
     <>
       <Helmet>
-        <title>Client Questionnaire | OneofOne Marketing</title>
-        <meta name="description" content="Fill out our client website content questionnaire to get started with OneofOne Marketing." />
+        <title>Client Questionnaire | OneOfOneSystems LLC</title>
+        <meta name="description" content="Fill out our client website content questionnaire to get started with OneOfOneSystems LLC." />
       </Helmet>
       <div className="min-h-screen bg-background py-12 px-4">
         <div className="max-w-3xl mx-auto">

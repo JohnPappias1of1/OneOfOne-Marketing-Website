@@ -53,7 +53,7 @@ export function FAQSection() {
             <span className="gradient-text">Questions</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Everything you need to know about working with OneofOne Marketing.
+            Everything you need to know about working with OneOfOneSystems LLC.
           </p>
         </div>
 

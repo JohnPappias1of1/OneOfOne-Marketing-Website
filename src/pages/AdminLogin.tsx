@@ -58,7 +58,7 @@ export default function AdminLogin() {
               <Lock className="w-7 h-7 text-primary" />
             </div>
             <h1 className="font-display text-2xl font-bold">Admin Login</h1>
-            <p className="text-muted-foreground text-sm mt-1">OneofOne Marketing CRM</p>
+            <p className="text-muted-foreground text-sm mt-1">OneOfOneSystems LLC CRM</p>
           </div>
 
           <form onSubmit={handleLogin} className="space-y-4">

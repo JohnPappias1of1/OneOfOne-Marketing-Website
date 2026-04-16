@@ -17,8 +17,8 @@ const BookNow = () => {
   return (
     <>
       <SEOHead
-        title="Book Now | OneofOne Marketing"
-        description="Schedule your free strategy call with OneofOne Marketing. Pick a time that works for you and let's build your growth plan."
+        title="Book Now | OneOfOneSystems LLC"
+        description="Schedule your free strategy call with OneOfOneSystems LLC. Pick a time that works for you and let's build your growth plan."
         canonical="/book-now"
       />
       <Layout>
