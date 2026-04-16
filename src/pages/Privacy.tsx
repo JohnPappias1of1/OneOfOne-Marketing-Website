@@ -48,6 +48,9 @@ export default function PrivacyPage() {
                   <li><strong className="text-foreground">Carriers:</strong> Supported carriers include AT&T, T-Mobile, Verizon, Sprint, and most other major U.S. carriers. Carrier participation may vary.</li>
                   <li><strong className="text-foreground">No Sharing:</strong> We do not sell, rent, or share your phone number or SMS opt-in information with third parties or affiliates for marketing purposes.</li>
                 </ul>
+                <p className="font-semibold text-foreground">
+                  No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+                </p>
 
                 <h2 className="font-display text-xl font-bold text-foreground mt-8">Carrier Liability Disclaimer</h2>
                 <p>
