@@ -64,7 +64,7 @@ export default function PrivacyPage() {
 
                 <h2 className="font-display text-xl font-bold text-foreground mt-8">Information Sharing</h2>
                 <p>
-                  We do not sell, trade, rent, or otherwise transfer your personal information to outside parties. We do not share your information with third parties or affiliates for marketing or promotional purposes.
+                  We do not sell, trade, or otherwise transfer your personal information to outside parties except as described in this policy. We may share information (excluding SMS opt-in data and consent) with trusted third parties who assist us in operating our website or conducting our business.
                 </p>
 
                 <h2 className="font-display text-xl font-bold text-foreground mt-8">Data Security</h2>
