@@ -75,7 +75,7 @@ export function LeadCaptureForm({ variant = "full", className = "", webhookUrl =
     watch,
     setValue,
   } = useForm<FormData>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(variant === "compact" ? baseSchema : fullSchema),
     defaultValues: {
       services: [],
     },
