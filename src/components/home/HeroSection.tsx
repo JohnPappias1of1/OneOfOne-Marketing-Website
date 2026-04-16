@@ -96,7 +96,11 @@ export function HeroSection() {
                   See exactly what's holding your business back + a 90-day roadmap to fix it.
                 </p>
               </div>
-              <LeadCaptureForm variant="compact" />
+              <LeadCaptureForm
+                variant="compact"
+                webhookUrl="https://services.leadconnectorhq.com/hooks/iHzub8lZ7JkGC1SLf02S/webhook-trigger/1c37eaed-f9ad-473d-a94d-2bd94b5b5058"
+                source="website-home-hero"
+              />
             </div>
           </div>
         </div>

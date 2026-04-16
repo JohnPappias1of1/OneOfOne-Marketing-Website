@@ -50,9 +50,13 @@ const businessTypes = [
 interface LeadCaptureFormProps {
   variant?: "full" | "compact";
   className?: string;
+  webhookUrl?: string;
+  source?: string;
 }
 
-export function LeadCaptureForm({ variant = "full", className = "" }: LeadCaptureFormProps) {
+const DEFAULT_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/iHzub8lZ7JkGC1SLf02S/webhook-trigger/b39ab4b2-b163-4110-9bc5-9cf43aa11bfc";
+
+export function LeadCaptureForm({ variant = "full", className = "", webhookUrl = DEFAULT_WEBHOOK_URL, source = "website-contact-form" }: LeadCaptureFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
@@ -108,7 +112,7 @@ export function LeadCaptureForm({ variant = "full", className = "" }: LeadCaptur
 
       // Send to GoHighLevel inbound webhook
       try {
-        await fetch("https://services.leadconnectorhq.com/hooks/iHzub8lZ7JkGC1SLf02S/webhook-trigger/b39ab4b2-b163-4110-9bc5-9cf43aa11bfc", {
+        await fetch(webhookUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -123,7 +127,7 @@ export function LeadCaptureForm({ variant = "full", className = "" }: LeadCaptur
             monthlyAdSpend: data.monthlyAdSpend,
             services: data.services,
             notes: data.notes,
-            source: "website-contact-form",
+            source,
             submittedAt: new Date().toISOString(),
           }),
         });
