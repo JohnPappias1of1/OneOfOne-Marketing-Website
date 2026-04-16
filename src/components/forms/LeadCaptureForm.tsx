@@ -7,20 +7,26 @@ import { Loader2, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
-const formSchema = z.object({
+const baseSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
-  businessName: z.string().min(1, "Business name is required"),
-  website: z.string().url("Please enter a valid URL").or(z.literal("")),
+  lastName: z.string().optional(),
+  businessName: z.string().optional(),
+  website: z.string().url("Please enter a valid URL").or(z.literal("")).optional(),
   email: z.string().email("Please enter a valid email"),
   phone: z.string().min(10, "Please enter a valid phone number"),
   monthlyAdSpend: z.string().optional(),
-  services: z.array(z.string()).min(1, "Please select at least one service"),
+  services: z.array(z.string()).optional(),
   businessType: z.string().optional(),
   notes: z.string().optional(),
 });
 
-type FormData = z.infer<typeof formSchema>;
+const fullSchema = baseSchema.extend({
+  lastName: z.string().min(1, "Last name is required"),
+  businessName: z.string().min(1, "Business name is required"),
+  services: z.array(z.string()).min(1, "Please select at least one service"),
+});
+
+type FormData = z.infer<typeof fullSchema>;
 
 const adSpendOptions = [
   "Not currently running ads",
