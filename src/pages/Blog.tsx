@@ -37,7 +37,7 @@ export default function BlogPage() {
     <>
       <SEOHead
         title="Blog | Marketing Insights & Growth Strategies"
-        description="Learn proven marketing strategies, SEO tips, and growth tactics from the OneofOne Marketing team. Actionable insights for service businesses and DTC brands."
+        description="Learn proven marketing strategies, SEO tips, and growth tactics from the OneOfOneSystems LLC team. Actionable insights for service businesses and DTC brands."
         canonical="/blog"
       />
       <Layout>

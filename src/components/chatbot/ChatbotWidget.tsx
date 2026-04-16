@@ -23,7 +23,7 @@ export function ChatbotWidget() {
         {
           role: "assistant",
           content:
-            "Hey there! 👋 Welcome to OneofOne Marketing. I'm here to help you grow your business. What can I help you with today?",
+            "Hey there! 👋 Welcome to OneOfOneSystems LLC. I'm here to help you grow your business. What can I help you with today?",
         },
       ]);
       setTimeout(() => inputRef.current?.focus(), 100);
@@ -95,7 +95,7 @@ export function ChatbotWidget() {
                 <MessageSquare className="w-4 h-4 text-primary" />
               </div>
               <div>
-                <p className="text-sm font-semibold">OneofOne Marketing</p>
+                <p className="text-sm font-semibold">OneOfOneSystems LLC</p>
                 <p className="text-xs text-muted-foreground">Typically replies instantly</p>
               </div>
             </div>

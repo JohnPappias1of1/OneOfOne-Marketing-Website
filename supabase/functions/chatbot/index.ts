@@ -6,7 +6,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const SYSTEM_PROMPT = `You are a friendly, professional marketing assistant for OneofOne Marketing, a premium digital marketing agency based in Dallas, TX. Your role is to:
+const SYSTEM_PROMPT = `You are a friendly, professional marketing assistant for OneOfOneSystems LLC, a premium digital marketing agency based in Dallas, TX. Your role is to:
 
 1. GREET visitors warmly and ask how you can help
 2. EXPLAIN our services when asked:

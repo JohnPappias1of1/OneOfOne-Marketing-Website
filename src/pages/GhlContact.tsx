@@ -16,8 +16,8 @@ const GhlContact = () => {
   return (
     <>
       <SEOHead
-        title="Contact Us | OneofOne Marketing"
-        description="Get in touch with OneofOne Marketing. Fill out our contact form and we'll get back to you."
+        title="Contact Us | OneOfOneSystems LLC"
+        description="Get in touch with OneOfOneSystems LLC. Fill out our contact form and we'll get back to you."
       />
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <div className="w-full max-w-2xl">

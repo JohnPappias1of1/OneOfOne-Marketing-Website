@@ -40,7 +40,7 @@ export default function AboutPage() {
     <>
       <SEOHead
         title="About Us | The Team Behind Your Growth"
-        description="Learn about OneofOne Marketing—our story, values, and the principles that guide how we build customer acquisition systems for businesses."
+        description="Learn about OneOfOneSystems LLC—our story, values, and the principles that guide how we build customer acquisition systems for businesses."
         canonical="/about"
       />
       <Layout>
@@ -57,7 +57,7 @@ export default function AboutPage() {
                 <span className="gradient-text">Not Just Marketing</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                OneofOne Marketing was founded on a simple belief: businesses don't need more marketing—they need a system that actually works.
+                OneOfOneSystems LLC was founded on a simple belief: businesses don't need more marketing—they need a system that actually works.
               </p>
             </div>
           </div>

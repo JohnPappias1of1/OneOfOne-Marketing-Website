@@ -7,8 +7,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "john@oneofonemarketing.com",
-    href: "mailto:john@oneofonemarketing.com",
+    value: "Johnp@oneofonesystems.com",
+    href: "mailto:Johnp@oneofonesystems.com",
   },
   {
     icon: MapPin,
@@ -30,7 +30,7 @@ export default function ContactPage() {
     <>
       <SEOHead
         title="Contact Us | Book a Free Strategy Call"
-        description="Ready to grow your business? Book a free strategy call with OneofOne Marketing. Get a website audit, SEO analysis, and custom growth roadmap."
+        description="Ready to grow your business? Book a free strategy call with OneOfOneSystems LLC. Get a website audit, SEO analysis, and custom growth roadmap."
         canonical="/contact"
       />
       <Layout>

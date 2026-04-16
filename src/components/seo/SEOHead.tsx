@@ -17,7 +17,7 @@ export function SEOHead({
   ogType = "website",
   schema,
 }: SEOHeadProps) {
-  const siteName = "OneofOne Marketing";
+  const siteName = "OneOfOneSystems LLC";
   const fullTitle = `${title} | ${siteName}`;
   const baseUrl = "https://www.oneofonemarketing.com";
 
@@ -58,7 +58,7 @@ export function SEOHead({
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "OneofOne Marketing",
+  name: "OneOfOneSystems LLC",
   url: "https://www.oneofonemarketing.com",
   logo: "https://www.oneofonemarketing.com/logo.png",
   description: "We build customer-acquisition systems: high-converting websites + SEO + paid ads + automation.",
@@ -79,7 +79,7 @@ export const organizationSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "OneofOne Marketing",
+  name: "OneOfOneSystems LLC",
   image: "https://www.oneofonemarketing.com/logo.png",
   "@id": "https://www.oneofonemarketing.com",
   url: "https://www.oneofonemarketing.com",
@@ -122,7 +122,7 @@ export const generateServiceSchema = (
   serviceType: name,
   provider: {
     "@type": "Organization",
-    name: "OneofOne Marketing",
+    name: "OneOfOneSystems LLC",
     url: "https://www.oneofonemarketing.com",
   },
   description,
@@ -155,7 +155,7 @@ export const reviewSchema = {
   "@type": "AggregateRating",
   itemReviewed: {
     "@type": "Organization",
-    name: "OneofOne Marketing",
+    name: "OneOfOneSystems LLC",
   },
   ratingValue: "4.9",
   bestRating: "5",

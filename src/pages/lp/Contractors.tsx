@@ -530,7 +530,7 @@ export default function ContractorsLP() {
         {/* Footer */}
         <footer className="border-t border-border/50 py-8">
           <div className="max-w-5xl mx-auto px-4 text-center text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} OneofOne Marketing. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} OneOfOneSystems LLC. All rights reserved.</p>
           </div>
         </footer>
       </div>

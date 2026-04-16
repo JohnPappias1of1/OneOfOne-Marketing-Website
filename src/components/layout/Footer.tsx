@@ -110,11 +110,11 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:john@oneofonemarketing.com"
+                  href="mailto:Johnp@oneofonesystems.com"
                   className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4 text-primary" />
-                  john@oneofonemarketing.com
+                  Johnp@oneofonesystems.com
                 </a>
               </li>
               <li>
@@ -130,7 +130,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} OneofOne Marketing. All rights reserved.
+            © {new Date().getFullYear()} OneOfOneSystems LLC. All rights reserved.
           </p>
           <div className="flex gap-6">
             {navigation.legal.map((item) => (

@@ -16,8 +16,8 @@ const SmsOptin = () => {
   return (
     <>
       <SEOHead
-        title="SMS Updates | OneofOne Marketing"
-        description="Opt in to receive exclusive marketing tips and updates via SMS from OneofOne Marketing."
+        title="SMS Updates | OneOfOneSystems LLC"
+        description="Opt in to receive exclusive marketing tips and updates via SMS from OneOfOneSystems LLC."
       />
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <div className="w-full max-w-2xl">

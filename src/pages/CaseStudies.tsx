@@ -97,7 +97,7 @@ export default function CaseStudiesPage() {
     <>
       <SEOHead
         title="Case Studies | Real Results for Real Businesses"
-        description="See how OneofOne Marketing has helped businesses increase leads, book more calls, and grow revenue with our proven marketing systems."
+        description="See how OneOfOneSystems LLC has helped businesses increase leads, book more calls, and grow revenue with our proven marketing systems."
         canonical="/case-studies"
       />
       <Layout>

@@ -33,7 +33,7 @@ const Index = () => {
     <>
       <SEOHead
         title="Marketing Agency | Web Design, SEO & Lead Generation"
-        description="OneofOne Marketing builds customer-acquisition systems: high-converting websites, SEO, paid ads & AI automation. Book a free strategy call today."
+        description="OneOfOneSystems LLC builds customer-acquisition systems: high-converting websites, SEO, paid ads & AI automation. Book a free strategy call today."
         canonical="/"
         schema={homeSchema}
       />
