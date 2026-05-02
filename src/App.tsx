@@ -24,6 +24,8 @@ import AdminLeads from "./pages/admin/Leads";
 import AdminAppointments from "./pages/admin/Appointments";
 import AdminChatSessions from "./pages/admin/ChatSessions";
 import AdminTeam from "./pages/admin/Team";
+import AdminWebsitePreviews from "./pages/admin/WebsitePreviews";
+import WebsitePreview from "./pages/WebsitePreview";
 import { ChatbotWidget } from "./components/chatbot/ChatbotWidget";
 import { GhlStickyWidget } from "./components/GhlStickyWidget";
 
@@ -51,6 +53,8 @@ const App = () => (
             <Route path="/admin/appointments" element={<AdminAppointments />} />
             <Route path="/admin/chats" element={<AdminChatSessions />} />
             <Route path="/admin/team" element={<AdminTeam />} />
+            <Route path="/admin/website-previews" element={<AdminWebsitePreviews />} />
+            <Route path="/website/:slug" element={<WebsitePreview />} />
             <Route path="/lp/contractors" element={<ContractorsLP />} />
             <Route path="/sms-optin" element={<SmsOptin />} />
             <Route path="/client-questionnaire" element={<ClientQuestionnaire />} />
