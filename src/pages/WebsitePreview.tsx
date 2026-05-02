@@ -51,7 +51,7 @@ export default function WebsitePreview() {
   if (!preview) {
     return (
       <>
-        <SEOHead title="Preview Not Found" description="This website preview is unavailable." canonical={`/website/${slug}`} noindex />
+        <SEOHead title="Preview Not Found" description="This website preview is unavailable." canonical={`/website/${slug}`} />
         <Layout>
           <div className="section-container py-24 text-center">
             <h1 className="font-display text-4xl font-bold mb-4">Preview Not Found</h1>
@@ -75,7 +75,7 @@ export default function WebsitePreview() {
         title={`${preview.client_name} — Website Preview`}
         description={preview.description || `Custom website preview for ${preview.client_name}.`}
         canonical={`/website/${preview.slug}`}
-        noindex
+       
       />
       <Layout>
         <section className="py-16 lg:py-24 bg-gradient-hero">
