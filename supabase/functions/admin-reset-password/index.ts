@@ -5,21 +5,48 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// v2 - list users
-Deno.serve(async (_req) => {
-  const admin = createClient(
-    Deno.env.get("SUPABASE_URL")!,
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
-  );
-  const { data, error } = await admin.auth.admin.listUsers();
-  if (error) {
-    return new Response(JSON.stringify({ error: String(error) }), {
+const ALLOWED_EMAIL = "john@oneofonemarketing.com";
+
+Deno.serve(async (req) => {
+  if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
+
+  try {
+    const { email, password } = await req.json();
+    if (email?.toLowerCase() !== ALLOWED_EMAIL || !password || password.length < 8) {
+      return new Response(JSON.stringify({ error: "invalid input" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    const admin = createClient(
+      Deno.env.get("SUPABASE_URL")!,
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+    );
+
+    const { data: list, error: listErr } = await admin.auth.admin.listUsers();
+    if (listErr) throw listErr;
+    const user = list.users.find((u) => u.email?.toLowerCase() === ALLOWED_EMAIL);
+    if (!user) {
+      return new Response(JSON.stringify({ error: "user not found" }), {
+        status: 404,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    const { error: updErr } = await admin.auth.admin.updateUserById(user.id, {
+      password,
+      email_confirm: true,
+    });
+    if (updErr) throw updErr;
+
+    return new Response(JSON.stringify({ ok: true }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  } catch (e) {
+    return new Response(JSON.stringify({ error: String(e) }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
-  const users = data.users.map((u) => ({ id: u.id, email: u.email }));
-  return new Response(JSON.stringify({ mode: "list", count: users.length, users }), {
-    headers: { ...corsHeaders, "Content-Type": "application/json" },
-  });
 });
