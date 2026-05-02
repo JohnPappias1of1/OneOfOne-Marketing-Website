@@ -204,6 +204,48 @@ export type Database = {
         }
         Relationships: []
       }
+      website_previews: {
+        Row: {
+          client_name: string
+          created_at: string
+          cta_label: string | null
+          cta_url: string | null
+          description: string | null
+          headline: string | null
+          id: string
+          is_active: boolean
+          loom_url: string
+          slug: string
+          updated_at: string
+        }
+        Insert: {
+          client_name: string
+          created_at?: string
+          cta_label?: string | null
+          cta_url?: string | null
+          description?: string | null
+          headline?: string | null
+          id?: string
+          is_active?: boolean
+          loom_url: string
+          slug: string
+          updated_at?: string
+        }
+        Update: {
+          client_name?: string
+          created_at?: string
+          cta_label?: string | null
+          cta_url?: string | null
+          description?: string | null
+          headline?: string | null
+          id?: string
+          is_active?: boolean
+          loom_url?: string
+          slug?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
