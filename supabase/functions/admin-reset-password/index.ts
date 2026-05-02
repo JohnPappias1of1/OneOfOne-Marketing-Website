@@ -5,6 +5,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+// v2 - list users
 Deno.serve(async (_req) => {
   const admin = createClient(
     Deno.env.get("SUPABASE_URL")!,
@@ -17,8 +18,8 @@ Deno.serve(async (_req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
-  const users = data.users.map((u) => ({ id: u.id, email: u.email, created_at: u.created_at }));
-  return new Response(JSON.stringify({ count: users.length, users }), {
+  const users = data.users.map((u) => ({ id: u.id, email: u.email }));
+  return new Response(JSON.stringify({ mode: "list", count: users.length, users }), {
     headers: { ...corsHeaders, "Content-Type": "application/json" },
   });
 });
