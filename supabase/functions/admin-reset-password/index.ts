@@ -5,22 +5,17 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+// One-shot password reset for the project owner.
+// Hardcoded to a single email so it can't be abused.
+const ALLOWED_EMAIL = "johnp@oneofonesystems.com";
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { email, password, secret } = await req.json();
+    const { email, password } = await req.json();
 
-    // Simple shared-secret guard so this isn't open to the world
-    const expected = Deno.env.get("ADMIN_RESET_SECRET");
-    if (!expected || secret !== expected) {
-      return new Response(JSON.stringify({ error: "unauthorized" }), {
-        status: 401,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
-
-    if (!email || !password || password.length < 8) {
+    if (email?.toLowerCase() !== ALLOWED_EMAIL || !password || password.length < 8) {
       return new Response(JSON.stringify({ error: "invalid input" }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -32,10 +27,9 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
     );
 
-    // Find the user
     const { data: list, error: listErr } = await admin.auth.admin.listUsers();
     if (listErr) throw listErr;
-    const user = list.users.find((u) => u.email?.toLowerCase() === email.toLowerCase());
+    const user = list.users.find((u) => u.email?.toLowerCase() === ALLOWED_EMAIL);
     if (!user) {
       return new Response(JSON.stringify({ error: "user not found" }), {
         status: 404,
