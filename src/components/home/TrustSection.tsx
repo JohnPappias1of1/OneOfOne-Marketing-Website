@@ -23,31 +23,31 @@ interface ReviewsData {
 
 const fallbackReviews = [
   {
-    name: "Sarah Mitchell",
-    business: "Premier Home Services",
+    name: "Mike Thompson",
+    business: "Thompson HVAC Services",
     rating: 5,
-    text: "OneofOne completely transformed our lead generation. We went from 10 calls/month to 40+ quality leads weekly.",
+    text: "OneofOne completely transformed our lead generation. We went from 10 service calls/month to 40+ quality HVAC leads weekly.",
     result: "+300% more leads",
   },
   {
-    name: "Marcus Johnson",
-    business: "Johnson Law Group",
+    name: "Carlos Ramirez",
+    business: "Apex Roofing & Exteriors",
     rating: 5,
-    text: "The SEO work alone paid for itself in the first month. We're now ranking #1 for our main keywords.",
+    text: "The SEO work alone paid for itself in the first month. We're now ranking #1 for roofing keywords across our service area.",
     result: "#1 Google rankings",
   },
   {
-    name: "Emily Chen",
-    business: "Luxe Beauty Studio",
+    name: "Dave Sullivan",
+    business: "Sullivan Plumbing Co.",
     rating: 5,
-    text: "Their Facebook ads system is incredible. We're getting bookings at half the cost we were paying before.",
+    text: "Their Google Ads system is incredible. We're booking plumbing jobs at half the cost we were paying before.",
     result: "50% lower CPA",
   },
 ];
 
 const industries = [
-  "Home Services", "Legal", "Medical & Dental", "Real Estate",
-  "Beauty & Wellness", "E-commerce", "Automotive", "Professional Services",
+  "HVAC", "Heating & Cooling", "Roofing", "Roof Replacement",
+  "Plumbing", "Drain & Sewer", "Emergency Services", "Home Service Contractors",
 ];
 
 export function TrustSection() {
