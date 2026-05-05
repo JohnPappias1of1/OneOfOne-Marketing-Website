@@ -14,6 +14,10 @@ import {
   ArrowRight,
   CheckCircle2,
   X,
+  PhoneMissed,
+  Zap,
+  Bot,
+  MapPin,
 } from "lucide-react";
 
 type Preview = {
