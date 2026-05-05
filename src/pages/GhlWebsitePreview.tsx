@@ -4,7 +4,17 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
-import { Loader2, ExternalLink } from "lucide-react";
+import {
+  Loader2,
+  ExternalLink,
+  Smartphone,
+  Star,
+  MessageCircle,
+  LayoutDashboard,
+  ArrowRight,
+  CheckCircle2,
+  X,
+} from "lucide-react";
 
 type Preview = {
   id: string;
