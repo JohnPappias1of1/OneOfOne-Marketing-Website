@@ -235,8 +235,59 @@ export default function GhlWebsitePreview() {
                   Every lead. Every channel. Straight to your pocket — before your competitor even sees it.
                 </p>
               </div>
+            </div>
 
-              {/* Review funnel flowchart */}
+            {/* Built To Catch Every Lead — 4-card grid */}
+            <div className="max-w-6xl mx-auto mt-16">
+              <div className="text-center mb-8">
+                <h3 className="font-display text-2xl sm:text-3xl font-bold mb-2">
+                  Built To Catch Every Lead — <span className="text-primary">Even The Ones You'd Normally Lose</span>
+                </h3>
+                <p className="text-muted-foreground italic">This is where the system pays for itself.</p>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  {
+                    icon: PhoneMissed,
+                    tag: "📞 Missed-Call Auto Text-Back",
+                    headline: "Stop Losing $20K/Month To Voicemail",
+                    why: "Every missed call gets an instant text-back — so the lead is still yours when you climb down off the roof.",
+                  },
+                  {
+                    icon: Zap,
+                    tag: "⚡ Instant Lead Reply (Under 5 Seconds)",
+                    headline: "Be First, Or Be Forgotten",
+                    why: "Your leads get a real reply in under 5 seconds. Your competitors take 11 hours. That's the whole game.",
+                  },
+                  {
+                    icon: Bot,
+                    tag: "🤖 AI Receptionist (optional add-on)",
+                    headline: "A $50K Receptionist For $200/Month",
+                    why: "Answers every call. Qualifies every lead. Books every appointment. Even at 11pm on a Sunday.",
+                  },
+                  {
+                    icon: MapPin,
+                    tag: "📍 Local SEO Optimized",
+                    headline: "Show Up Where The Money Is",
+                    why: "Built from day one to rank in the Google Map Pack — because nobody scrolls to page two.",
+                  },
+                ].map((item) => (
+                  <div key={item.tag} className="glass-card p-5 hover:border-primary/40 transition-colors">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">{item.tag}</p>
+                    </div>
+                    <h4 className="font-display text-lg font-bold text-primary mb-2">{item.headline}</h4>
+                    <p className="text-sm text-muted-foreground italic leading-relaxed">{item.why}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Review funnel flowchart */}
+            <div className="max-w-3xl mx-auto mt-16">
               <div>
                 <p className="text-primary font-semibold uppercase tracking-wider text-xs mb-3">
                   Reputation insurance, on autopilot
