@@ -190,9 +190,7 @@ export default function GhlWebsitePreview() {
             </div>
 
             {/* Phone notification mockup */}
-            <div className="max-w-3xl mx-auto mt-16 flex justify-center">
-              <div className="hidden">{/* spacer wrapper to keep grid styling minimal */}</div>
-              <div className="w-full grid lg:grid-cols-1 gap-10 items-center">
+            <div className="max-w-6xl mx-auto mt-16">
               {/* Phone mockup */}
               <div className="flex flex-col items-center">
                 <p className="text-primary font-semibold uppercase tracking-wider text-xs mb-3">
