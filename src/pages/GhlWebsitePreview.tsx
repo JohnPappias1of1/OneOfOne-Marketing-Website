@@ -107,19 +107,36 @@ export default function GhlWebsitePreview() {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
-                  { icon: Smartphone, label: "Lead notifications to your phone in 30 seconds" },
-                  { icon: Star, label: "Auto-review requests after every job" },
-                  { icon: MessageCircle, label: "24/7 chat capture" },
-                  { icon: LayoutDashboard, label: "One dashboard, one app" },
+                  {
+                    icon: Smartphone,
+                    title: "Lead notifications in 30 seconds",
+                    why: "Buzz on your phone before they call your competitor",
+                  },
+                  {
+                    icon: Star,
+                    title: "Auto-review requests after every job",
+                    why: "Every happy customer, asked automatically",
+                  },
+                  {
+                    icon: MessageCircle,
+                    title: "24/7 chat capture",
+                    why: "Capture leads at 9pm when you're already home",
+                  },
+                  {
+                    icon: LayoutDashboard,
+                    title: "One dashboard, one app",
+                    why: "Stop juggling 5 tools — one login for everything",
+                  },
                 ].map((item) => (
                   <div
-                    key={item.label}
+                    key={item.title}
                     className="glass-card p-4 flex flex-col items-center text-center gap-2 hover:border-primary/40 transition-colors"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <p className="text-xs sm:text-sm leading-snug text-foreground/90">{item.label}</p>
+                    <p className="text-xs sm:text-sm font-semibold leading-snug text-foreground">{item.title}</p>
+                    <p className="text-[11px] sm:text-xs leading-snug text-muted-foreground">{item.why}</p>
                   </div>
                 ))}
               </div>
