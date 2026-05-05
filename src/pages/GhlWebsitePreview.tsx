@@ -25,6 +25,7 @@ type Preview = {
   description: string | null;
   cta_label: string | null;
   cta_url: string | null;
+  cta_business_name: string | null;
 };
 
 export default function GhlWebsitePreview() {
@@ -74,7 +75,9 @@ export default function GhlWebsitePreview() {
   }
 
   const headline = preview.headline || `Your Website Preview, ${preview.client_name}`;
-  const ctaLabel = preview.cta_label || "Book a Call";
+  const businessName = preview.cta_business_name?.trim() || preview.client_name;
+  const ctaLabelTemplate = preview.cta_label || "See how this would work for [Business Name]";
+  const ctaLabel = ctaLabelTemplate.replace(/\[Business Name\]/gi, businessName);
   const ctaUrl = preview.cta_url || "/book-now";
   const isExternal = /^https?:\/\//.test(ctaUrl);
 

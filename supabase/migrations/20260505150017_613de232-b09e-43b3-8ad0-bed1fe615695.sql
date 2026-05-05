@@ -1,0 +1,1 @@
+ALTER TABLE public.ghl_website_previews ADD COLUMN cta_business_name text;

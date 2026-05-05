@@ -106,6 +106,7 @@ export type Database = {
         Row: {
           client_name: string
           created_at: string
+          cta_business_name: string | null
           cta_label: string | null
           cta_url: string | null
           description: string | null
@@ -119,6 +120,7 @@ export type Database = {
         Insert: {
           client_name: string
           created_at?: string
+          cta_business_name?: string | null
           cta_label?: string | null
           cta_url?: string | null
           description?: string | null
@@ -132,6 +134,7 @@ export type Database = {
         Update: {
           client_name?: string
           created_at?: string
+          cta_business_name?: string | null
           cta_label?: string | null
           cta_url?: string | null
           description?: string | null

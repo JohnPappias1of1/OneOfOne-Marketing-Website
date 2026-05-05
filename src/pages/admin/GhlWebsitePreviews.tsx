@@ -19,6 +19,7 @@ type Preview = {
   description: string | null;
   cta_label: string | null;
   cta_url: string | null;
+  cta_business_name: string | null;
   is_active: boolean;
   created_at: string;
 };
@@ -29,8 +30,9 @@ const empty = {
   preview_url: "",
   headline: "",
   description: "",
-  cta_label: "Book a Call",
+  cta_label: "See how this would work for [Business Name]",
   cta_url: "/book-now",
+  cta_business_name: "",
   is_active: true,
 };
 
@@ -67,8 +69,9 @@ export default function AdminGhlWebsitePreviews() {
       preview_url: p.preview_url,
       headline: p.headline || "",
       description: p.description || "",
-      cta_label: p.cta_label || "Book a Call",
+      cta_label: p.cta_label || "See how this would work for [Business Name]",
       cta_url: p.cta_url || "/book-now",
+      cta_business_name: p.cta_business_name || "",
       is_active: p.is_active,
     });
     setOpen(true);
@@ -174,10 +177,22 @@ export default function AdminGhlWebsitePreviews() {
               <Label>Description (optional)</Label>
               <Textarea value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} rows={3} />
             </div>
+            <div>
+              <Label>Business Name (for CTA)</Label>
+              <Input
+                value={form.cta_business_name}
+                onChange={(e) => setForm({ ...form, cta_business_name: e.target.value })}
+                placeholder="Acme Roofing"
+              />
+              <p className="text-xs text-muted-foreground mt-1">
+                Replaces [Business Name] in the CTA. Leave empty to fall back to the client name.
+              </p>
+            </div>
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <Label>CTA Label</Label>
                 <Input value={form.cta_label} onChange={(e) => setForm({ ...form, cta_label: e.target.value })} />
+                <p className="text-xs text-muted-foreground mt-1">Use [Business Name] as a placeholder.</p>
               </div>
               <div>
                 <Label>CTA URL</Label>
