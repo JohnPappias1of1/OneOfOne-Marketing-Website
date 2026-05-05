@@ -31,6 +31,7 @@ export default function GhlWebsitePreview() {
   const { slug } = useParams<{ slug: string }>();
   const [preview, setPreview] = useState<Preview | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showDemoBadge, setShowDemoBadge] = useState(true);
 
   useEffect(() => {
     const load = async () => {
