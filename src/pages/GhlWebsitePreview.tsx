@@ -80,7 +80,7 @@ export default function GhlWebsitePreview() {
 
   const headline = preview.headline || `Your Website Preview, ${preview.client_name}`;
   const businessName = preview.cta_business_name?.trim() || preview.client_name;
-  const ctaLabelTemplate = preview.cta_label || "See how this would work for [Business Name]";
+  const ctaLabelTemplate = preview.cta_label || "Claim This Build for [Business Name] →";
   const ctaLabel = ctaLabelTemplate.replace(/\[Business Name\]/gi, businessName);
   const ctaUrl = preview.cta_url || "/book-now";
   const isExternal = /^https?:\/\//.test(ctaUrl);
@@ -256,13 +256,13 @@ export default function GhlWebsitePreview() {
                   {
                     icon: Zap,
                     tag: "⚡ Instant Lead Reply (Under 5 Seconds)",
-                    headline: "Be First, Or Be Forgotten",
+                    headline: "Beat Your Competitor By 11 Hours",
                     why: "Your leads get a real reply in under 5 seconds. Your competitors take 11 hours. That's the whole game.",
                   },
                   {
                     icon: Bot,
                     tag: "🤖 AI Receptionist (optional add-on)",
-                    headline: "A $50K Receptionist For $200/Month",
+                    headline: "A $50K Receptionist For Less Than $20/Day",
                     why: "Answers every call. Qualifies every lead. Books every appointment. Even at 11pm on a Sunday.",
                   },
                   {
