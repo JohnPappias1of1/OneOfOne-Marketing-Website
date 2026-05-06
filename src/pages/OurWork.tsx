@@ -81,9 +81,8 @@ export default function OurWork() {
                     </div>
                     <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
-                  <h3 className="font-display text-xl font-bold mb-1">{p.client_name}</h3>
                   {p.headline && (
-                    <p className="text-sm text-primary mb-3">{p.headline}</p>
+                    <h3 className="font-display text-xl font-bold mb-3">{p.headline}</h3>
                   )}
                   {p.description && (
                     <p className="text-sm text-muted-foreground line-clamp-3 mb-4">{p.description}</p>
