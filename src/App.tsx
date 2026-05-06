@@ -28,6 +28,7 @@ import AdminWebsitePreviews from "./pages/admin/WebsitePreviews";
 import AdminGhlWebsitePreviews from "./pages/admin/GhlWebsitePreviews";
 import WebsitePreview from "./pages/WebsitePreview";
 import GhlWebsitePreview from "./pages/GhlWebsitePreview";
+import OurWork from "./pages/OurWork";
 import { ChatbotWidget } from "./components/chatbot/ChatbotWidget";
 import { GhlStickyWidget } from "./components/GhlStickyWidget";
 
@@ -44,6 +45,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
             <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/our-work" element={<OurWork />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />

@@ -7,6 +7,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
   { name: "Case Studies", href: "/case-studies" },
+  { name: "Our Work", href: "/our-work" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
   { name: "SMS Updates", href: "/sms-optin" },
