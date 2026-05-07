@@ -26,7 +26,7 @@ const caseStudies: CaseStudy[] = [
     id: 1,
     client: "Apex Gutters & Powerwash",
     industry: "Gutters / Exterior Cleaning",
-    location: "Long Island, NY",
+    location: "Dallas–Fort Worth, TX",
     period: "Active engagement — started 2025",
     problem:
       "Strong word-of-mouth business with no real digital front door. Quotes were getting lost in text threads, missed calls were going un-followed-up, and there was no way to track which marketing dollars were actually producing jobs.",
