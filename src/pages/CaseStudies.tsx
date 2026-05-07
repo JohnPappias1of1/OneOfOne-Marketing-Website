@@ -45,10 +45,10 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: 2,
-    client: "HVAC contractor (NY metro)",
+    client: "HVAC contractor (DFW metro)",
     anonymized: true,
     industry: "HVAC",
-    location: "Nassau County, NY",
+    location: "Plano, TX",
     period: "2024 engagement",
     problem:
       "Outdated site, almost no inbound from Google, and a sales process that depended on the owner answering his cell phone. Roughly 10–15 service calls per month and no clear picture of where leads were coming from.",
@@ -87,10 +87,10 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: 4,
-    client: "Plumbing company (NY)",
+    client: "Plumbing company (TX)",
     anonymized: true,
     industry: "Plumbing",
-    location: "Long Island, NY",
+    location: "Dallas–Fort Worth, TX",
     period: "2024 engagement",
     problem:
       "Inconsistent bookings and a high after-hours missed-call rate. Emergency plumbing jobs were going to whoever picked up first.",
