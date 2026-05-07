@@ -61,7 +61,11 @@ export default function ContactPage() {
                   <h2 className="font-display text-2xl font-bold mb-6">
                     Book Your Free Strategy Call
                   </h2>
-                  <LeadCaptureForm variant="full" />
+                  <LeadCaptureForm
+                    variant="full"
+                    webhookUrl="https://services.leadconnectorhq.com/hooks/iHzub8lZ7JkGC1SLf02S/webhook-trigger/68263900-d036-49ed-a8e1-623cc9dbec44"
+                    source="contact-page-strategy-call"
+                  />
                 </div>
               </div>
 
