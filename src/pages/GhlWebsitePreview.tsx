@@ -30,6 +30,7 @@ type Preview = {
   cta_label: string | null;
   cta_url: string | null;
   cta_business_name: string | null;
+  notification_service: string | null;
 };
 
 export default function GhlWebsitePreview() {
@@ -223,7 +224,7 @@ export default function GhlWebsitePreview() {
                             </div>
                             <p className="text-sm font-bold text-neutral-900 mt-0.5">🔔 New Lead — John D.</p>
                             <p className="text-xs text-neutral-700 leading-snug mt-0.5">
-                              2847 Oak St — needs roof inspection
+                              2847 Oak St — needs {preview.notification_service || "roof inspection"}
                             </p>
                           </div>
                         </div>

@@ -20,6 +20,7 @@ type Preview = {
   cta_label: string | null;
   cta_url: string | null;
   cta_business_name: string | null;
+  notification_service: string | null;
   is_active: boolean;
   created_at: string;
 };
@@ -33,6 +34,7 @@ const empty = {
   cta_label: "See how this would work for [Business Name]",
   cta_url: "/book-now",
   cta_business_name: "",
+  notification_service: "roof inspection",
   is_active: true,
 };
 
@@ -72,6 +74,7 @@ export default function AdminGhlWebsitePreviews() {
       cta_label: p.cta_label || "See how this would work for [Business Name]",
       cta_url: p.cta_url || "/book-now",
       cta_business_name: p.cta_business_name || "",
+      notification_service: p.notification_service || "roof inspection",
       is_active: p.is_active,
     });
     setOpen(true);
@@ -186,6 +189,17 @@ export default function AdminGhlWebsitePreviews() {
               />
               <p className="text-xs text-muted-foreground mt-1">
                 Replaces [Business Name] in the CTA. Leave empty to fall back to the client name.
+              </p>
+            </div>
+            <div>
+              <Label>Phone Notification Service</Label>
+              <Input
+                value={form.notification_service}
+                onChange={(e) => setForm({ ...form, notification_service: e.target.value })}
+                placeholder="roof inspection"
+              />
+              <p className="text-xs text-muted-foreground mt-1">
+                Fills the phone mockup text: "needs ___" (e.g. "AC tune-up", "drain cleaning", "gutter cleaning").
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3">

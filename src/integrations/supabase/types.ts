@@ -113,6 +113,7 @@ export type Database = {
           headline: string | null
           id: string
           is_active: boolean
+          notification_service: string | null
           preview_url: string
           slug: string
           updated_at: string
@@ -127,6 +128,7 @@ export type Database = {
           headline?: string | null
           id?: string
           is_active?: boolean
+          notification_service?: string | null
           preview_url: string
           slug: string
           updated_at?: string
@@ -141,6 +143,7 @@ export type Database = {
           headline?: string | null
           id?: string
           is_active?: boolean
+          notification_service?: string | null
           preview_url?: string
           slug?: string
           updated_at?: string
