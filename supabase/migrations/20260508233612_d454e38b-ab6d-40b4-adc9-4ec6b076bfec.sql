@@ -1,0 +1,1 @@
+ALTER TABLE public.ghl_website_previews ADD COLUMN IF NOT EXISTS notification_service text DEFAULT 'roof inspection';
