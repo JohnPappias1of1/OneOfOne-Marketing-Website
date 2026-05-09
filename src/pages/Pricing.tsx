@@ -37,7 +37,7 @@ const tiers = [
       "Missed-call text-back",
       "Full automation sequences",
       "Advanced review funnel with filtering",
-      "Monthly reporting",
+      
       "Priority support",
     ],
     bestFor: [
