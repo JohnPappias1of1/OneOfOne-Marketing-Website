@@ -33,7 +33,7 @@ const services = [
       "CRM integration",
       "Ongoing maintenance",
     ],
-    timeline: "4-6 weeks",
+    timeline: "7-9 days",
     outcomes: ["2-3x higher conversion rates", "Faster load times", "Mobile traffic capture", "Clear user journeys"],
   },
   {
