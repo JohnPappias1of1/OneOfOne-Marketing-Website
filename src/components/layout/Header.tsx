@@ -70,11 +70,11 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+16317665791"
+              href="tel:+19726325036"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>(631) 766-5791</span>
+              <span>(972) 632-5036</span>
             </a>
             <Link to="/contact">
               <Button className="btn-primary text-sm">
