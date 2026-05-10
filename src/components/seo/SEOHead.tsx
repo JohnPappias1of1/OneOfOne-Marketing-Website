@@ -64,7 +64,7 @@ export const organizationSchema = {
   description: "We build customer-acquisition systems: high-converting websites + SEO + paid ads + automation.",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+1-631-766-5791",
+    telephone: "+1-972-632-5036",
     contactType: "sales",
     availableLanguage: "English",
   },
@@ -83,7 +83,7 @@ export const localBusinessSchema = {
   image: "https://www.oneofonemarketing.com/logo.png",
   "@id": "https://www.oneofonemarketing.com",
   url: "https://www.oneofonemarketing.com",
-  telephone: "+1-631-766-5791",
+  telephone: "+1-972-632-5036",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
