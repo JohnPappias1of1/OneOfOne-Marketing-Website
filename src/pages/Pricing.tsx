@@ -74,6 +74,13 @@ const tiers = [
 ];
 
 export default function PricingPage() {
+  const [annual, setAnnual] = useState(false);
+
+  const formatAnnual = (monthlyStr: string) => {
+    const num = parseInt(monthlyStr.replace(/[^0-9]/g, ""), 10);
+    return `$${(num * 12).toLocaleString()}`;
+  };
+
   return (
     <>
       <SEOHead
