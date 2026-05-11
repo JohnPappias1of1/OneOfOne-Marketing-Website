@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight, Sparkles } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
+import { Check, ArrowRight, Sparkles, Gift } from "lucide-react";
 
 const tiers = [
   {
