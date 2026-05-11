@@ -149,12 +149,20 @@ export default function PricingPage() {
 
                   <div className="mb-8 pb-8 border-b border-border">
                     <div className="flex items-baseline gap-2 mb-2">
-                      <span className="text-4xl font-display font-bold gradient-text">{tier.monthly}</span>
-                      <span className="text-muted-foreground">/month</span>
+                      <span className="text-4xl font-display font-bold gradient-text">
+                        {annual ? formatAnnual(tier.monthly) : tier.monthly}
+                      </span>
+                      <span className="text-muted-foreground">/{annual ? "year" : "month"}</span>
                     </div>
                     <p className="text-sm text-muted-foreground">
                       <span className="font-medium text-foreground">{tier.setup}</span> one-time setup
                     </p>
+                    {annual && (
+                      <p className="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/15 text-primary text-xs font-semibold">
+                        <Gift className="w-3 h-3" />
+                        +12 weeks free included
+                      </p>
+                    )}
                   </div>
 
                   <div className="mb-8 flex-1">
