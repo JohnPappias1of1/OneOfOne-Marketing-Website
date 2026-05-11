@@ -22,6 +22,7 @@ type Preview = {
   cta_business_name: string | null;
   notification_service: string | null;
   is_active: boolean;
+  is_private: boolean;
   created_at: string;
 };
 
@@ -36,6 +37,7 @@ const empty = {
   cta_business_name: "",
   notification_service: "roof inspection",
   is_active: true,
+  is_private: false,
 };
 
 export default function AdminGhlWebsitePreviews() {
@@ -76,6 +78,7 @@ export default function AdminGhlWebsitePreviews() {
       cta_business_name: p.cta_business_name || "",
       notification_service: p.notification_service || "roof inspection",
       is_active: p.is_active,
+      is_private: p.is_private ?? false,
     });
     setOpen(true);
   };
@@ -215,7 +218,16 @@ export default function AdminGhlWebsitePreviews() {
             </div>
             <div className="flex items-center gap-3">
               <Switch checked={form.is_active} onCheckedChange={(v) => setForm({ ...form, is_active: v })} />
-              <Label>Active (publicly visible)</Label>
+              <Label>Active (link works when shared)</Label>
+            </div>
+            <div className="flex items-start gap-3">
+              <Switch checked={form.is_private} onCheckedChange={(v) => setForm({ ...form, is_private: v })} />
+              <div>
+                <Label>Private (hide from public Our Work page)</Label>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Private previews still work via direct link — they just won't appear in the public gallery. Manage them under "Private Previews" in the sidebar.
+                </p>
+              </div>
             </div>
           </div>
           <DialogFooter>

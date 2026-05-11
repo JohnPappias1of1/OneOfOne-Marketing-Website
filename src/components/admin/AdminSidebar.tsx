@@ -1,4 +1,4 @@
-import { Users, CalendarDays, MessageSquare, Settings, LogOut, LayoutDashboard, UserPlus, Monitor, Globe } from "lucide-react";
+import { Users, CalendarDays, MessageSquare, Settings, LogOut, LayoutDashboard, UserPlus, Monitor, Globe, Lock } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -21,6 +21,7 @@ const navItems = [
   { title: "Chat Sessions", url: "/admin/chats", icon: MessageSquare },
   { title: "Website Previews", url: "/admin/website-previews", icon: Monitor },
   { title: "GHL Previews", url: "/admin/ghl-previews", icon: Globe },
+  { title: "Private Previews", url: "/admin/private-previews", icon: Lock },
   { title: "Team", url: "/admin/team", icon: UserPlus },
 ];
 

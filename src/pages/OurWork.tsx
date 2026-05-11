@@ -25,6 +25,7 @@ export default function OurWork() {
         .from("ghl_website_previews")
         .select("id, slug, client_name, preview_url, headline, description")
         .eq("is_active", true)
+        .eq("is_private", false)
         .order("created_at", { ascending: false });
       setItems((data as Preview[]) || []);
       setLoading(false);
