@@ -27,6 +27,7 @@ import AdminChatSessions from "./pages/admin/ChatSessions";
 import AdminTeam from "./pages/admin/Team";
 import AdminWebsitePreviews from "./pages/admin/WebsitePreviews";
 import AdminGhlWebsitePreviews from "./pages/admin/GhlWebsitePreviews";
+import AdminPrivatePreviews from "./pages/admin/PrivatePreviews";
 import WebsitePreview from "./pages/WebsitePreview";
 import GhlWebsitePreview from "./pages/GhlWebsitePreview";
 import OurWork from "./pages/OurWork";
@@ -61,6 +62,7 @@ const App = () => (
             <Route path="/admin/team" element={<AdminTeam />} />
             <Route path="/admin/website-previews" element={<AdminWebsitePreviews />} />
             <Route path="/admin/ghl-previews" element={<AdminGhlWebsitePreviews />} />
+            <Route path="/admin/private-previews" element={<AdminPrivatePreviews />} />
             <Route path="/website/:slug" element={<WebsitePreview />} />
             <Route path="/site-preview/:slug" element={<GhlWebsitePreview />} />
             <Route path="/lp/contractors" element={<ContractorsLP />} />
