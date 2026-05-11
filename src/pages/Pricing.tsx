@@ -99,9 +99,24 @@ export default function PricingPage() {
             <h1 className="font-display text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 max-w-4xl mx-auto">
               Simple, Honest <span className="gradient-text">Pricing</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
               Pick the package that matches where your business is right now. Upgrade anytime as you grow.
             </p>
+
+            {/* Billing toggle */}
+            <div className="inline-flex items-center gap-4 px-6 py-3 rounded-full border border-border bg-card/50 backdrop-blur">
+              <span className={`text-sm font-medium ${!annual ? "text-foreground" : "text-muted-foreground"}`}>
+                Monthly
+              </span>
+              <Switch checked={annual} onCheckedChange={setAnnual} aria-label="Toggle annual billing" />
+              <span className={`text-sm font-medium flex items-center gap-2 ${annual ? "text-foreground" : "text-muted-foreground"}`}>
+                Annual
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/15 text-primary text-xs font-semibold">
+                  <Gift className="w-3 h-3" />
+                  +12 weeks free
+                </span>
+              </span>
+            </div>
           </div>
         </section>
 
