@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight, Sparkles } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
+import { Check, ArrowRight, Sparkles, Gift } from "lucide-react";
 
 const tiers = [
   {
@@ -72,6 +74,13 @@ const tiers = [
 ];
 
 export default function PricingPage() {
+  const [annual, setAnnual] = useState(false);
+
+  const formatAnnual = (monthlyStr: string) => {
+    const num = parseInt(monthlyStr.replace(/[^0-9]/g, ""), 10);
+    return `$${(num * 12).toLocaleString()}`;
+  };
+
   return (
     <>
       <SEOHead
@@ -90,9 +99,24 @@ export default function PricingPage() {
             <h1 className="font-display text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 max-w-4xl mx-auto">
               Simple, Honest <span className="gradient-text">Pricing</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
               Pick the package that matches where your business is right now. Upgrade anytime as you grow.
             </p>
+
+            {/* Billing toggle */}
+            <div className="inline-flex items-center gap-4 px-6 py-3 rounded-full border border-border bg-card/50 backdrop-blur">
+              <span className={`text-sm font-medium ${!annual ? "text-foreground" : "text-muted-foreground"}`}>
+                Monthly
+              </span>
+              <Switch checked={annual} onCheckedChange={setAnnual} aria-label="Toggle annual billing" />
+              <span className={`text-sm font-medium flex items-center gap-2 ${annual ? "text-foreground" : "text-muted-foreground"}`}>
+                Annual
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/15 text-primary text-xs font-semibold">
+                  <Gift className="w-3 h-3" />
+                  +12 weeks free
+                </span>
+              </span>
+            </div>
           </div>
         </section>
 
@@ -125,12 +149,20 @@ export default function PricingPage() {
 
                   <div className="mb-8 pb-8 border-b border-border">
                     <div className="flex items-baseline gap-2 mb-2">
-                      <span className="text-4xl font-display font-bold gradient-text">{tier.monthly}</span>
-                      <span className="text-muted-foreground">/month</span>
+                      <span className="text-4xl font-display font-bold gradient-text">
+                        {annual ? formatAnnual(tier.monthly) : tier.monthly}
+                      </span>
+                      <span className="text-muted-foreground">/{annual ? "year" : "month"}</span>
                     </div>
                     <p className="text-sm text-muted-foreground">
                       <span className="font-medium text-foreground">{tier.setup}</span> one-time setup
                     </p>
+                    {annual && (
+                      <p className="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/15 text-primary text-xs font-semibold">
+                        <Gift className="w-3 h-3" />
+                        +12 weeks free included
+                      </p>
+                    )}
                   </div>
 
                   <div className="mb-8 flex-1">
