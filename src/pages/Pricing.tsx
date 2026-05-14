@@ -28,7 +28,7 @@ const tiers: Tier[] = [
     monthly: "$297",
     tagline: "Get the foundation in place fast.",
     highlight: false,
-    setupPriceId: "starter_setup_once",
+    setupPriceId: "starter_setup_fee",
     monthlyPriceId: "starter_monthly",
     yearlyPriceId: "starter_yearly",
     includes: [
@@ -52,7 +52,7 @@ const tiers: Tier[] = [
     monthly: "$497",
     tagline: "Our most popular package — built to grow with you.",
     highlight: true,
-    setupPriceId: "core_setup_once",
+    setupPriceId: "core_setup_fee",
     monthlyPriceId: "core_monthly",
     yearlyPriceId: "core_yearly",
     includes: [
@@ -75,7 +75,7 @@ const tiers: Tier[] = [
     monthly: "$797",
     tagline: "Full acquisition system for serious operators.",
     highlight: false,
-    setupPriceId: "premium_setup_once",
+    setupPriceId: "premium_setup_fee",
     monthlyPriceId: "premium_monthly",
     yearlyPriceId: "premium_yearly",
     includes: [
