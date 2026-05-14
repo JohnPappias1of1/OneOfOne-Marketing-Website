@@ -260,6 +260,15 @@ export default function PricingPage() {
           </div>
         </section>
       </Layout>
+
+      <Dialog open={!!checkoutPriceId} onOpenChange={(open) => !open && setCheckoutPriceId(null)}>
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Complete your subscription</DialogTitle>
+          </DialogHeader>
+          {checkoutPriceId && <StripeEmbeddedCheckout priceId={checkoutPriceId} />}
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
