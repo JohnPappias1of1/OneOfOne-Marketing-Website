@@ -8,13 +8,29 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { StripeEmbeddedCheckout } from "@/components/StripeEmbeddedCheckout";
 import { Check, ArrowRight, Sparkles, Gift } from "lucide-react";
 
-const tiers = [
+type Tier = {
+  name: string;
+  setup: string;
+  monthly: string;
+  tagline: string;
+  highlight: boolean;
+  setupPriceId: string;
+  monthlyPriceId: string;
+  yearlyPriceId: string;
+  includes: string[];
+  bestFor: string[];
+};
+
+const tiers: Tier[] = [
   {
     name: "Starter",
     setup: "$500",
     monthly: "$297",
     tagline: "Get the foundation in place fast.",
     highlight: false,
+    setupPriceId: "starter_setup_once",
+    monthlyPriceId: "starter_monthly",
+    yearlyPriceId: "starter_yearly",
     includes: [
       "Custom website",
       "Chat widget",
@@ -36,12 +52,14 @@ const tiers = [
     monthly: "$497",
     tagline: "Our most popular package — built to grow with you.",
     highlight: true,
+    setupPriceId: "core_setup_once",
+    monthlyPriceId: "core_monthly",
+    yearlyPriceId: "core_yearly",
     includes: [
       "Everything in Starter",
       "Missed-call text-back",
       "Full automation sequences",
       "Advanced review funnel with filtering",
-      
       "Priority support",
     ],
     bestFor: [
@@ -57,6 +75,9 @@ const tiers = [
     monthly: "$797",
     tagline: "Full acquisition system for serious operators.",
     highlight: false,
+    setupPriceId: "premium_setup_once",
+    monthlyPriceId: "premium_monthly",
+    yearlyPriceId: "premium_yearly",
     includes: [
       "Everything in Core",
       "AI receptionist",
