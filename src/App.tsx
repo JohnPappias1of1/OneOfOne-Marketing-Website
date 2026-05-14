@@ -73,6 +73,7 @@ const App = () => (
             <Route path="/client-questionnaire" element={<ClientQuestionnaire />} />
             <Route path="/ghl-contact" element={<GhlContact />} />
             <Route path="/book-now" element={<BookNow />} />
+            <Route path="/checkout/return" element={<CheckoutReturn />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <ChatbotWidget />
