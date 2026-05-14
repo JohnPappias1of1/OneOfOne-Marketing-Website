@@ -98,10 +98,15 @@ const tiers: Tier[] = [
 
 export default function PricingPage() {
   const [annual, setAnnual] = useState(false);
+  const [checkoutPriceId, setCheckoutPriceId] = useState<string | null>(null);
 
   const formatAnnual = (monthlyStr: string) => {
     const num = parseInt(monthlyStr.replace(/[^0-9]/g, ""), 10);
     return `$${(num * 12).toLocaleString()}`;
+  };
+
+  const startCheckout = (tier: Tier) => {
+    setCheckoutPriceId(annual ? tier.yearlyPriceId : tier.monthlyPriceId);
   };
 
   return (
