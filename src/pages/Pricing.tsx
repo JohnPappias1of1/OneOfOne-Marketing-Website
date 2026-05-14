@@ -221,18 +221,23 @@ export default function PricingPage() {
                     </ul>
                   </div>
 
-                  <Link to="/contact" className="block">
-                    <Button
-                      className={tier.highlight ? "btn-primary w-full" : "w-full"}
-                      variant={tier.highlight ? "default" : "outline"}
-                    >
-                      Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
+                  <Button
+                    onClick={() => startCheckout(tier)}
+                    className={tier.highlight ? "btn-primary w-full" : "w-full"}
+                    variant={tier.highlight ? "default" : "outline"}
+                  >
+                    Subscribe Now
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
                 </div>
               ))}
             </div>
+            <p className="text-center text-sm text-muted-foreground mt-8">
+              Setup fee is invoiced separately after subscription. Need to talk first?{" "}
+              <Link to="/contact" className="text-primary hover:underline">
+                Book a free strategy call
+              </Link>.
+            </p>
           </div>
         </section>
 
