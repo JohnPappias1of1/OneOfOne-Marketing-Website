@@ -31,8 +31,10 @@ import AdminPrivatePreviews from "./pages/admin/PrivatePreviews";
 import WebsitePreview from "./pages/WebsitePreview";
 import GhlWebsitePreview from "./pages/GhlWebsitePreview";
 import OurWork from "./pages/OurWork";
+import CheckoutReturn from "./pages/CheckoutReturn";
 import { ChatbotWidget } from "./components/chatbot/ChatbotWidget";
 import { GhlStickyWidget } from "./components/GhlStickyWidget";
+import { PaymentTestModeBanner } from "./components/PaymentTestModeBanner";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +45,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <PaymentTestModeBanner />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
@@ -70,6 +73,7 @@ const App = () => (
             <Route path="/client-questionnaire" element={<ClientQuestionnaire />} />
             <Route path="/ghl-contact" element={<GhlContact />} />
             <Route path="/book-now" element={<BookNow />} />
+            <Route path="/checkout/return" element={<CheckoutReturn />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <ChatbotWidget />

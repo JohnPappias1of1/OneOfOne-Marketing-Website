@@ -4,15 +4,33 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { StripeEmbeddedCheckout } from "@/components/StripeEmbeddedCheckout";
 import { Check, ArrowRight, Sparkles, Gift } from "lucide-react";
 
-const tiers = [
+type Tier = {
+  name: string;
+  setup: string;
+  monthly: string;
+  tagline: string;
+  highlight: boolean;
+  setupPriceId: string;
+  monthlyPriceId: string;
+  yearlyPriceId: string;
+  includes: string[];
+  bestFor: string[];
+};
+
+const tiers: Tier[] = [
   {
     name: "Starter",
     setup: "$500",
     monthly: "$297",
     tagline: "Get the foundation in place fast.",
     highlight: false,
+    setupPriceId: "starter_setup_once",
+    monthlyPriceId: "starter_monthly",
+    yearlyPriceId: "starter_yearly",
     includes: [
       "Custom website",
       "Chat widget",
@@ -34,12 +52,14 @@ const tiers = [
     monthly: "$497",
     tagline: "Our most popular package — built to grow with you.",
     highlight: true,
+    setupPriceId: "core_setup_once",
+    monthlyPriceId: "core_monthly",
+    yearlyPriceId: "core_yearly",
     includes: [
       "Everything in Starter",
       "Missed-call text-back",
       "Full automation sequences",
       "Advanced review funnel with filtering",
-      
       "Priority support",
     ],
     bestFor: [
@@ -55,6 +75,9 @@ const tiers = [
     monthly: "$797",
     tagline: "Full acquisition system for serious operators.",
     highlight: false,
+    setupPriceId: "premium_setup_once",
+    monthlyPriceId: "premium_monthly",
+    yearlyPriceId: "premium_yearly",
     includes: [
       "Everything in Core",
       "AI receptionist",
@@ -75,10 +98,15 @@ const tiers = [
 
 export default function PricingPage() {
   const [annual, setAnnual] = useState(false);
+  const [checkoutPriceId, setCheckoutPriceId] = useState<string | null>(null);
 
   const formatAnnual = (monthlyStr: string) => {
     const num = parseInt(monthlyStr.replace(/[^0-9]/g, ""), 10);
     return `$${(num * 12).toLocaleString()}`;
+  };
+
+  const startCheckout = (tier: Tier) => {
+    setCheckoutPriceId(annual ? tier.yearlyPriceId : tier.monthlyPriceId);
   };
 
   return (
@@ -193,18 +221,23 @@ export default function PricingPage() {
                     </ul>
                   </div>
 
-                  <Link to="/contact" className="block">
-                    <Button
-                      className={tier.highlight ? "btn-primary w-full" : "w-full"}
-                      variant={tier.highlight ? "default" : "outline"}
-                    >
-                      Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
+                  <Button
+                    onClick={() => startCheckout(tier)}
+                    className={tier.highlight ? "btn-primary w-full" : "w-full"}
+                    variant={tier.highlight ? "default" : "outline"}
+                  >
+                    Subscribe Now
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
                 </div>
               ))}
             </div>
+            <p className="text-center text-sm text-muted-foreground mt-8">
+              Setup fee is invoiced separately after subscription. Need to talk first?{" "}
+              <Link to="/contact" className="text-primary hover:underline">
+                Book a free strategy call
+              </Link>.
+            </p>
           </div>
         </section>
 
@@ -227,6 +260,15 @@ export default function PricingPage() {
           </div>
         </section>
       </Layout>
+
+      <Dialog open={!!checkoutPriceId} onOpenChange={(open) => !open && setCheckoutPriceId(null)}>
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Complete your subscription</DialogTitle>
+          </DialogHeader>
+          {checkoutPriceId && <StripeEmbeddedCheckout priceId={checkoutPriceId} />}
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
