@@ -23,7 +23,7 @@ type Tier = {
 
 const tiers: Tier[] = [
   {
-    name: "Starter",
+    name: "Foundation",
     setup: "$500",
     monthly: "$297",
     tagline: "Get the foundation in place fast.",
@@ -35,9 +35,9 @@ const tiers: Tier[] = [
       "Custom website",
       "Chat widget",
       "Lead capture form",
-      "Lead Connector mobile app",
+      "All-in-One Lead Management App",
       "Review funnel",
-      "Basic local SEO",
+      "Local Search Visibility",
     ],
     bestFor: [
       "Newer businesses under 10 reviews",
