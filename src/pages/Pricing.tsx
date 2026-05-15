@@ -185,6 +185,7 @@ export default function PricingPage() {
                     <p className="text-sm text-muted-foreground">
                       <span className="font-medium text-foreground">{tier.setup}</span> one-time setup
                     </p>
+                    <p className="text-xs text-muted-foreground mt-1">+ tax where applicable</p>
                     {annual && (
                       <p className="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/15 text-primary text-xs font-semibold">
                         <Gift className="w-3 h-3" />
