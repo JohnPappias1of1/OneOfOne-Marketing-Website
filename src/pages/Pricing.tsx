@@ -35,9 +35,9 @@ const tiers: Tier[] = [
       "Custom website",
       "Chat widget",
       "Lead capture form",
-      "Lead Connector mobile app",
+      "All-in-One Lead Management App",
       "Review funnel",
-      "Basic local SEO",
+      "Local Search Visibility",
     ],
     bestFor: [
       "Newer businesses under 10 reviews",
