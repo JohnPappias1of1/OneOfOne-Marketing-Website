@@ -23,7 +23,7 @@ type Tier = {
 
 const tiers: Tier[] = [
   {
-    name: "Starter",
+    name: "Foundation",
     setup: "$500",
     monthly: "$297",
     tagline: "Get the foundation in place fast.",
