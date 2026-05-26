@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
-import { SEOHead } from "@/components/seo/SEOHead";
+import { SEOHead, generateCollectionPageSchema } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { ArrowRight, ExternalLink, Globe } from "lucide-react";
@@ -35,9 +35,19 @@ export default function OurWork() {
   return (
     <Layout>
       <SEOHead
-        title="Our Work — Website & Lead System Samples | OneofOne"
+        title="Our Work | Website & Lead System Samples"
         description="Real website builds and lead systems we've shipped for service businesses and DTC brands. Browse live samples."
         canonical="/our-work"
+        schema={generateCollectionPageSchema(
+          "Our Work",
+          "Live website builds and lead systems shipped for service businesses and DTC brands.",
+          "https://www.oneofonemarketing.com/our-work",
+          items.map((p) => ({
+            name: p.client_name,
+            url: `https://www.oneofonemarketing.com/site-preview/${p.slug}`,
+            description: p.headline ?? undefined,
+          }))
+        )}
       />
       <section className="pt-32 pb-16">
         <div className="section-container">

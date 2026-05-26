@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { SEOHead } from "@/components/seo/SEOHead";
+import { SEOHead, generateCollectionPageSchema } from "@/components/seo/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp, Quote, MapPin, Calendar, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -115,6 +115,15 @@ export default function CaseStudiesPage() {
         title="Case Studies | Real Client Work"
         description="Real engagements, real numbers, and the honest context behind them. See how OneofOne builds lead systems for service businesses."
         canonical="/case-studies"
+        schema={generateCollectionPageSchema(
+          "Case Studies",
+          "Real client engagements with outcomes, approach, and honest context.",
+          "https://www.oneofonemarketing.com/case-studies",
+          caseStudies.map((c) => ({
+            name: `${c.client} — ${c.industry}`,
+            description: c.problem,
+          }))
+        )}
       />
       <Layout>
         {/* Hero */}
