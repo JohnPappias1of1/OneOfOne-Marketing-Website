@@ -18,7 +18,8 @@ export function SEOHead({
   schema,
 }: SEOHeadProps) {
   const siteName = "OneOfOneSystems LLC";
-  const fullTitle = `${title} | ${siteName}`;
+  // Use title as-is. Pages own their full <title> so we can keep it under 60 chars.
+  const fullTitle = title;
   const baseUrl = "https://www.oneofonemarketing.com";
 
   return (
@@ -60,11 +61,12 @@ export const organizationSchema = {
   "@type": "Organization",
   name: "OneOfOneSystems LLC",
   url: "https://www.oneofonemarketing.com",
-  logo: "https://www.oneofonemarketing.com/logo.png",
+  logo: "https://www.oneofonemarketing.com/android-chrome-512x512.png",
   description: "We build customer-acquisition systems: high-converting websites + SEO + paid ads + automation.",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+1-972-632-5036",
+    telephone: "+1-631-766-5791",
+    email: "john@oneofonemarketing.com",
     contactType: "sales",
     availableLanguage: "English",
   },
@@ -80,29 +82,21 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "OneOfOneSystems LLC",
-  image: "https://www.oneofonemarketing.com/logo.png",
+  image: "https://www.oneofonemarketing.com/android-chrome-512x512.png",
   "@id": "https://www.oneofonemarketing.com",
   url: "https://www.oneofonemarketing.com",
-  telephone: "+1-972-632-5036",
+  telephone: "+1-631-766-5791",
+  email: "john@oneofonemarketing.com",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "123 Marketing Street",
-    addressLocality: "Los Angeles",
-    addressRegion: "CA",
-    postalCode: "90001",
+    addressLocality: "Dallas",
+    addressRegion: "TX",
     addressCountry: "US",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 34.0522,
-    longitude: -118.2437,
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "09:00",
-    closes: "18:00",
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -147,6 +141,35 @@ export const generateFAQSchema = (
       text: faq.answer,
     },
   })),
+});
+
+// Collection Page Schema Generator (for portfolio / case study indexes)
+export const generateCollectionPageSchema = (
+  name: string,
+  description: string,
+  url: string,
+  items: Array<{ name: string; url?: string; description?: string }>
+) => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name,
+  description,
+  url,
+  isPartOf: {
+    "@type": "WebSite",
+    name: "OneOfOneSystems LLC",
+    url: "https://www.oneofonemarketing.com",
+  },
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: item.url,
+      description: item.description,
+    })),
+  },
 });
 
 // Review Schema
