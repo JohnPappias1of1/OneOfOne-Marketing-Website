@@ -192,51 +192,86 @@ export default function GhlWebsitePreview() {
 
             {/* Phone notification mockup */}
             <div className="max-w-6xl mx-auto mt-16">
-              {/* Phone mockup */}
               <div className="flex flex-col items-center">
                 <p className="text-primary font-semibold uppercase tracking-wider text-xs mb-3">
                   This is what happens when a lead hits your site
                 </p>
-                <h3 className="font-display text-2xl font-bold text-center mb-6">
-                  A push notification, in <span className="text-primary">12 seconds</span>.
+                <h3 className="font-display text-2xl font-bold text-center mb-8">
+                  A push notification, in <span className="text-primary">12 seconds</span> — plus an instant text-back.
                 </h3>
-                <div className="relative mx-auto w-[280px] h-[560px] rounded-[44px] bg-neutral-900 border-[10px] border-neutral-800 shadow-2xl shadow-primary/10 overflow-hidden">
-                  {/* Notch */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-neutral-900 rounded-b-2xl z-10"></div>
-                  {/* Lockscreen bg */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-black">
-                    {/* Time */}
-                    <div className="pt-14 text-center text-white">
-                      <p className="text-xs opacity-80">Tuesday, May 5</p>
-                      <p className="font-display text-6xl font-light tracking-tight mt-1">9:42</p>
-                    </div>
-                    {/* Notification */}
-                    <div className="absolute top-44 left-3 right-3 animate-fade-in">
-                      <div className="bg-white/95 backdrop-blur rounded-2xl p-3 shadow-xl">
-                        <div className="flex items-start gap-2">
-                          <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
-                            LC
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center justify-between">
-                              <p className="text-[11px] font-semibold text-neutral-700 uppercase">Lead Connector</p>
-                              <p className="text-[10px] text-neutral-500">12s ago</p>
+
+                <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-14">
+                  {/* Phone 1 — Push notification */}
+                  <div className="flex flex-col items-center">
+                    <div className="relative mx-auto w-[280px] h-[560px] rounded-[44px] bg-neutral-900 border-[10px] border-neutral-800 shadow-2xl shadow-primary/10 overflow-hidden">
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-neutral-900 rounded-b-2xl z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-black">
+                        <div className="pt-14 text-center text-white">
+                          <p className="text-xs opacity-80">Tuesday, May 5</p>
+                          <p className="font-display text-6xl font-light tracking-tight mt-1">9:42</p>
+                        </div>
+                        <div className="absolute top-44 left-3 right-3 animate-fade-in">
+                          <div className="bg-white/95 backdrop-blur rounded-2xl p-3 shadow-xl">
+                            <div className="flex items-start gap-2">
+                              <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                                LC
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center justify-between">
+                                  <p className="text-[11px] font-semibold text-neutral-700 uppercase">Lead Connector</p>
+                                  <p className="text-[10px] text-neutral-500">12s ago</p>
+                                </div>
+                                <p className="text-sm font-bold text-neutral-900 mt-0.5">🔔 New Lead — John D.</p>
+                                <p className="text-xs text-neutral-700 leading-snug mt-0.5">
+                                  2847 Oak St — needs {preview.notification_service || "roof inspection"}
+                                </p>
+                              </div>
                             </div>
-                            <p className="text-sm font-bold text-neutral-900 mt-0.5">🔔 New Lead — John D.</p>
-                            <p className="text-xs text-neutral-700 leading-snug mt-0.5">
-                              2847 Oak St — needs {preview.notification_service || "roof inspection"}
-                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <p className="text-xs text-primary font-semibold uppercase tracking-wider mt-4">You get notified</p>
+                  </div>
+
+                  {/* Phone 2 — Auto text-back to the lead */}
+                  <div className="flex flex-col items-center">
+                    <div className="relative mx-auto w-[280px] h-[560px] rounded-[44px] bg-neutral-900 border-[10px] border-neutral-800 shadow-2xl shadow-primary/10 overflow-hidden">
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-neutral-900 rounded-b-2xl z-10"></div>
+                      <div className="absolute inset-0 bg-white flex flex-col">
+                        <div className="pt-8 pb-2 px-4 border-b border-neutral-200 text-center">
+                          <div className="w-10 h-10 rounded-full bg-primary mx-auto flex items-center justify-center text-white text-xs font-bold">
+                            {(businessName || "B").charAt(0)}
+                          </div>
+                          <p className="text-[11px] font-semibold text-neutral-800 mt-1 truncate">{businessName}</p>
+                          <p className="text-[9px] text-neutral-500">Text Message · Now</p>
+                        </div>
+                        <div className="flex-1 px-3 py-3 overflow-hidden">
+                          <div className="max-w-[88%] bg-neutral-100 rounded-2xl rounded-tl-md p-3 animate-fade-in">
+                            <p className="text-[11.5px] text-neutral-900 leading-snug whitespace-pre-line">
+{`Hey, sorry I missed you! I'll get back to you as soon as possible!
+
+If you want to give me a few details about the job, that would be great. You can click this link for a free quote:
+
+${(() => { try { return new URL(preview.preview_url).hostname; } catch { return "yoursite.com"; } })()}/contact
+
+– the owner at ${businessName}`}
+                            </p>
+                          </div>
+                          <p className="text-[9px] text-neutral-400 mt-1 ml-2">Delivered</p>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-xs text-primary font-semibold uppercase tracking-wider mt-4">Lead gets a text back</p>
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground mt-4 text-center max-w-xs">
-                  Every lead. Every channel. Straight to your pocket — before your competitor even sees it.
+
+                <p className="text-sm text-muted-foreground mt-8 text-center max-w-md">
+                  Every lead. Every channel. Straight to your pocket — and the customer hears back before your competitor even sees the call.
                 </p>
               </div>
             </div>
+
 
             {/* Built To Catch Every Lead — 4-card grid */}
             <div className="max-w-6xl mx-auto mt-16">
