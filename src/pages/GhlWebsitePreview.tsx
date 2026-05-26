@@ -249,7 +249,7 @@ export default function GhlWebsitePreview() {
                         <div className="flex-1 px-3 py-3 overflow-hidden">
                           <div className="max-w-[88%] bg-neutral-100 rounded-2xl rounded-tl-md p-3 animate-fade-in">
                             <p className="text-[11.5px] text-neutral-900 leading-snug whitespace-pre-line">
-{`Hey, sorry I missed you! I'll get back to you as soon as possible!
+{`Hey John, sorry I missed you! I'll get back to you as soon as possible!
 
 If you want to give me a few details about the job, that would be great. You can click this link for a free quote:
 
