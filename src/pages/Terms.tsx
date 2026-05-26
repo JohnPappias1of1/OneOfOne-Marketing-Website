@@ -5,7 +5,7 @@ export default function TermsPage() {
   return (
     <>
       <SEOHead
-        title="Terms of Service"
+        title="Terms of Service | OneofOne Marketing"
         description="OneOfOneSystems LLC terms of service. Read our terms and conditions for using our services."
         canonical="/terms"
       />
