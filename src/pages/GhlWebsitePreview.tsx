@@ -251,7 +251,7 @@ export default function GhlWebsitePreview() {
                             <p className="text-[11.5px] text-neutral-900 leading-snug whitespace-pre-line">
 {`Hey John — sorry I missed your call! I'll get back to you as soon as I can.
 
-If you want to shoot me a few details about the job, I can get you a free quote even faster: ${(() => { try { return new URL(preview.preview_url).hostname; } catch { return "yoursite.com"; } })()}/contact
+If you want to shoot me a few details about the job, I can get you a free quote even faster: ${businessName}
 
 Thanks,
 ${businessName}`}
