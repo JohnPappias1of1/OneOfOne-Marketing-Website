@@ -1,0 +1,23 @@
+# OneOfOneSystems LLC (OneofOne Marketing)
+
+> Customer-acquisition systems for service businesses and DTC brands: high-converting websites, SEO, paid ads, and AI automation.
+
+OneOfOneSystems LLC builds and operates lead-generation systems for contractors, local service businesses, and DTC brands. Engagements typically include a conversion-optimized website, lead capture and follow-up automation in GoHighLevel, local SEO, and paid acquisition.
+
+## Pages
+
+- [Home](/): Overview of services, results, and how the acquisition system works.
+- [Services](/services): Web design, SEO, paid ads, AI receptionist, and lead automation.
+- [Pricing](/pricing): Three monthly tiers — Solo Operator ($347), Pipeline Builder ($647), Market Dominator ($1,497).
+- [Case Studies](/case-studies): Real client engagements with outcomes and honest context.
+- [Our Work](/our-work): Live website and lead-system samples we've shipped.
+- [About](/about): Story, values, and the team behind the work.
+- [Contact](/contact): Get in touch or request a free strategy call.
+- [Book Now](/book-now): Schedule a free strategy call.
+- [Blog](/blog): Marketing insights and growth strategies.
+- [Contractors Landing Page](/lp/contractors): Marketing system tailored for contractors.
+
+## Optional
+
+- [Privacy Policy](/privacy)
+- [Terms of Service](/terms)

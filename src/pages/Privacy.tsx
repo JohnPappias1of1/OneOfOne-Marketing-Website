@@ -5,7 +5,7 @@ export default function PrivacyPage() {
   return (
     <>
       <SEOHead
-        title="Privacy Policy"
+        title="Privacy Policy | OneofOne Marketing"
         description="OneOfOneSystems LLC privacy policy. Learn how we collect, use, and protect your personal information."
         canonical="/privacy"
       />
