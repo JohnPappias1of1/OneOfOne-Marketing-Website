@@ -99,6 +99,8 @@ const plans: Plan[] = [
       "Owners already spending on ads but not seeing real ROI",
       "Operators who want the full system running on autopilot",
     ],
+    featuresIntro:
+      "The full system — capture everything coming in organically, then add paid channels to bring more in on top of it.",
     features: [
       { label: "Everything in The Pipeline Builder" },
       { label: "LSA (Local Service Ads) setup and management — highest-intent paid channel for trades, you pay per verified lead", highlight: true },
