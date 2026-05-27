@@ -40,6 +40,8 @@ const plans: Plan[] = [
       "Owners tired of looking smaller than they are",
       "Anyone building their first real online presence",
     ],
+    featuresIntro:
+      "Six pieces that work together as one system — so organic leads find you, reach you, and don't slip through the cracks.",
     features: [
       { label: "Custom website built to turn organic visitors into booked calls" },
       { label: "Live chat widget captures leads while you're on the job" },
