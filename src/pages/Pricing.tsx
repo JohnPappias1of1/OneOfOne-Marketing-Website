@@ -19,6 +19,7 @@ type Plan = {
   guarantee?: string;
   guaranteeNote?: string;
   bestFor: string[];
+  featuresIntro?: string;
   features: Feature[];
   ctaLabel: string;
   ctaNote: string;
@@ -39,6 +40,8 @@ const plans: Plan[] = [
       "Owners tired of looking smaller than they are",
       "Anyone building their first real online presence",
     ],
+    featuresIntro:
+      "Six pieces that work together as one system — so organic leads find you, reach you, and don't slip through the cracks.",
     features: [
       { label: "Custom website built to turn organic visitors into booked calls" },
       { label: "Live chat widget captures leads while you're on the job" },
@@ -69,6 +72,8 @@ const plans: Plan[] = [
       "Businesses losing jobs to missed calls and slow follow-up",
       "Operators ready to stop leaking revenue they're already earning",
     ],
+    featuresIntro:
+      "Everything in Solo Operator plus the response layer — leads don't just reach you, they get answered instantly before they call your competitor.",
     features: [
       { label: "Everything in The Solo Operator" },
       { label: "AI receptionist answers, qualifies, and books organic leads 24/7 — even when you're on a job", highlight: true },
@@ -94,6 +99,8 @@ const plans: Plan[] = [
       "Owners already spending on ads but not seeing real ROI",
       "Operators who want the full system running on autopilot",
     ],
+    featuresIntro:
+      "The full system — capture everything coming in organically, then add paid channels to bring more in on top of it.",
     features: [
       { label: "Everything in The Pipeline Builder" },
       { label: "LSA (Local Service Ads) setup and management — highest-intent paid channel for trades, you pay per verified lead", highlight: true },
@@ -185,6 +192,11 @@ function PlanCard({
       <p className="text-[9px] font-bold tracking-[0.14em] uppercase text-muted-foreground/60 mb-3">
         What's included
       </p>
+      {plan.featuresIntro && (
+        <p className="text-xs italic text-muted-foreground border-l-2 border-border pl-2.5 mb-3.5 leading-relaxed">
+          {plan.featuresIntro}
+        </p>
+      )}
       <ul className="space-y-2.5 mb-6 flex-1">
         {plan.features.map((f, i) => (
           <li key={i} className="flex items-start gap-2.5">
