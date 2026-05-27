@@ -192,6 +192,11 @@ function PlanCard({
       <p className="text-[9px] font-bold tracking-[0.14em] uppercase text-muted-foreground/60 mb-3">
         What's included
       </p>
+      {plan.featuresIntro && (
+        <p className="text-xs italic text-muted-foreground border-l-2 border-border pl-2.5 mb-3.5 leading-relaxed">
+          {plan.featuresIntro}
+        </p>
+      )}
       <ul className="space-y-2.5 mb-6 flex-1">
         {plan.features.map((f, i) => (
           <li key={i} className="flex items-start gap-2.5">
