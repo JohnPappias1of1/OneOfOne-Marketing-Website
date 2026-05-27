@@ -72,6 +72,8 @@ const plans: Plan[] = [
       "Businesses losing jobs to missed calls and slow follow-up",
       "Operators ready to stop leaking revenue they're already earning",
     ],
+    featuresIntro:
+      "Everything in Solo Operator plus the response layer — leads don't just reach you, they get answered instantly before they call your competitor.",
     features: [
       { label: "Everything in The Solo Operator" },
       { label: "AI receptionist answers, qualifies, and books organic leads 24/7 — even when you're on a job", highlight: true },
