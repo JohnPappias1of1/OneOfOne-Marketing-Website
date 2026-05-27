@@ -19,6 +19,7 @@ type Plan = {
   guarantee?: string;
   guaranteeNote?: string;
   bestFor: string[];
+  featuresIntro?: string;
   features: Feature[];
   ctaLabel: string;
   ctaNote: string;
