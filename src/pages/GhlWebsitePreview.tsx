@@ -239,6 +239,7 @@ export default function GhlWebsitePreview() {
                   <div className="flex flex-col items-center">
                     <div className="relative mx-auto w-[280px] h-[560px] rounded-[44px] bg-neutral-900 border-[10px] border-neutral-800 shadow-2xl shadow-primary/10 overflow-hidden">
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-neutral-900 rounded-b-2xl z-10"></div>
+                      <div className="absolute inset-0 bg-white flex flex-col">
                         <div className="pt-8 pb-2 px-4 border-b border-neutral-200 text-center">
                           <div className="w-10 h-10 rounded-full bg-primary mx-auto flex items-center justify-center text-white text-xs font-bold">
                             {(businessName || "B").charAt(0)}
