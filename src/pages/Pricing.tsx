@@ -51,7 +51,7 @@ const plans: Plan[] = [
       { label: "Local Search Visibility setup so you rank when nearby homeowners search" },
     ],
     ctaLabel: "Start Capturing",
-    ctaNote: "Setup included · Live in 48 hours · No contracts",
+    ctaNote: "Setup included · Live in 4–5 days · No contracts",
   },
   {
     id: "pipeline_builder",
@@ -165,7 +165,7 @@ function PlanCard({
         <span className="text-sm text-muted-foreground/60 ml-1">/mo</span>
       </div>
       <p className="text-[11px] text-muted-foreground/60 mb-1">
-        Setup included — live in 48 hours
+        Setup included — live in 4–5 days
       </p>
       {plan.popularBadge ? (
         <p className="text-[11px] font-semibold text-primary mb-5">{plan.popularBadge}</p>
