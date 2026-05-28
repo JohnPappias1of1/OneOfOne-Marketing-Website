@@ -20,6 +20,7 @@ type Preview = {
   cta_label: string | null;
   cta_url: string | null;
   cta_business_name: string | null;
+  owner_name: string | null;
   notification_service: string | null;
   is_active: boolean;
   is_private: boolean;
@@ -35,6 +36,7 @@ const empty = {
   cta_label: "See how this would work for [Business Name]",
   cta_url: "/book-now",
   cta_business_name: "",
+  owner_name: "",
   notification_service: "roof inspection",
   is_active: true,
   is_private: false,
@@ -76,6 +78,7 @@ export default function AdminGhlWebsitePreviews() {
       cta_label: p.cta_label || "See how this would work for [Business Name]",
       cta_url: p.cta_url || "/book-now",
       cta_business_name: p.cta_business_name || "",
+      owner_name: p.owner_name || "",
       notification_service: p.notification_service || "roof inspection",
       is_active: p.is_active,
       is_private: p.is_private ?? false,
@@ -192,6 +195,17 @@ export default function AdminGhlWebsitePreviews() {
               />
               <p className="text-xs text-muted-foreground mt-1">
                 Replaces [Business Name] in the CTA. Leave empty to fall back to the client name.
+              </p>
+            </div>
+            <div>
+              <Label>Owner Name (for text-back mockup)</Label>
+              <Input
+                value={form.owner_name}
+                onChange={(e) => setForm({ ...form, owner_name: e.target.value })}
+                placeholder="John Yanez"
+              />
+              <p className="text-xs text-muted-foreground mt-1">
+                Shown at the top of the phone mockup and as the signature ("Thanks, …"). Falls back to the business name.
               </p>
             </div>
             <div>
