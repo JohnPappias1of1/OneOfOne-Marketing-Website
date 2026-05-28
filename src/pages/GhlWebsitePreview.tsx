@@ -239,14 +239,11 @@ export default function GhlWebsitePreview() {
                   <div className="flex flex-col items-center">
                     <div className="relative mx-auto w-[280px] h-[560px] rounded-[44px] bg-neutral-900 border-[10px] border-neutral-800 shadow-2xl shadow-primary/10 overflow-hidden">
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-neutral-900 rounded-b-2xl z-10"></div>
-                      <div className="absolute inset-0 bg-white flex flex-col">
                         <div className="pt-8 pb-2 px-4 border-b border-neutral-200 text-center">
                           <div className="w-10 h-10 rounded-full bg-primary mx-auto flex items-center justify-center text-white text-xs font-bold">
-                            {((preview.owner_name || businessName) || "B").charAt(0)}
+                            {(businessName || "B").charAt(0)}
                           </div>
-                          <p className="text-[11px] font-semibold text-neutral-800 mt-1 truncate">
-                            {preview.owner_name ? `${preview.owner_name} — ${businessName}` : businessName}
-                          </p>
+                          <p className="text-[11px] font-semibold text-neutral-800 mt-1 truncate">{businessName}</p>
                           <p className="text-[9px] text-neutral-500">Text Message · Now</p>
                         </div>
                         <div className="flex-1 px-3 py-3 overflow-hidden">
@@ -257,10 +254,11 @@ export default function GhlWebsitePreview() {
 If you want to shoot me a few details about the job, I can get you a free quote even faster: ${businessName}
 
 Thanks,
-${preview.owner_name || businessName}`}
+${preview.client_name}`}
                             </p>
                           </div>
                           <p className="text-[9px] text-neutral-400 mt-1 ml-2">Delivered</p>
+                        </div>
                         </div>
                       </div>
                     </div>
