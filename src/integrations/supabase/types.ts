@@ -115,6 +115,7 @@ export type Database = {
           is_active: boolean
           is_private: boolean
           notification_service: string | null
+          owner_name: string | null
           preview_url: string
           slug: string
           updated_at: string
@@ -131,6 +132,7 @@ export type Database = {
           is_active?: boolean
           is_private?: boolean
           notification_service?: string | null
+          owner_name?: string | null
           preview_url: string
           slug: string
           updated_at?: string
@@ -147,6 +149,7 @@ export type Database = {
           is_active?: boolean
           is_private?: boolean
           notification_service?: string | null
+          owner_name?: string | null
           preview_url?: string
           slug?: string
           updated_at?: string
