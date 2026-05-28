@@ -31,6 +31,7 @@ type Preview = {
   cta_url: string | null;
   cta_business_name: string | null;
   notification_service: string | null;
+  owner_name: string | null;
 };
 
 export default function GhlWebsitePreview() {
