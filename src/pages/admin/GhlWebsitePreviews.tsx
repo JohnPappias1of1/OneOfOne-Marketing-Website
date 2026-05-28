@@ -20,6 +20,7 @@ type Preview = {
   cta_label: string | null;
   cta_url: string | null;
   cta_business_name: string | null;
+  owner_name: string | null;
   notification_service: string | null;
   is_active: boolean;
   is_private: boolean;
@@ -35,6 +36,7 @@ const empty = {
   cta_label: "See how this would work for [Business Name]",
   cta_url: "/book-now",
   cta_business_name: "",
+  owner_name: "",
   notification_service: "roof inspection",
   is_active: true,
   is_private: false,
