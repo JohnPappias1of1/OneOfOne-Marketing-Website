@@ -78,6 +78,7 @@ export default function AdminGhlWebsitePreviews() {
       cta_label: p.cta_label || "See how this would work for [Business Name]",
       cta_url: p.cta_url || "/book-now",
       cta_business_name: p.cta_business_name || "",
+      owner_name: p.owner_name || "",
       notification_service: p.notification_service || "roof inspection",
       is_active: p.is_active,
       is_private: p.is_private ?? false,
