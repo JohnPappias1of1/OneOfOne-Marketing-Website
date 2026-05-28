@@ -198,17 +198,6 @@ export default function AdminGhlWebsitePreviews() {
               </p>
             </div>
             <div>
-              <Label>Owner Name (for text-back mockup)</Label>
-              <Input
-                value={form.owner_name}
-                onChange={(e) => setForm({ ...form, owner_name: e.target.value })}
-                placeholder="John Yanez"
-              />
-              <p className="text-xs text-muted-foreground mt-1">
-                Shown at the top of the phone mockup and as the signature ("Thanks, …"). Falls back to the business name.
-              </p>
-            </div>
-            <div>
               <Label>Phone Notification Service</Label>
               <Input
                 value={form.notification_service}
