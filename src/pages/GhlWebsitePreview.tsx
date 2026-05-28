@@ -259,7 +259,6 @@ ${preview.client_name}`}
                           </div>
                           <p className="text-[9px] text-neutral-400 mt-1 ml-2">Delivered</p>
                         </div>
-                        </div>
                       </div>
                     </div>
                     <p className="text-xs text-primary font-semibold uppercase tracking-wider mt-4">Lead gets a text back</p>
