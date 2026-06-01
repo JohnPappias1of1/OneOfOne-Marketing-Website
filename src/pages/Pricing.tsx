@@ -65,7 +65,7 @@ const plans: Plan[] = [
       "Your organic traffic is already sending you leads. This system makes sure not a single one goes unanswered.",
     price: 647,
     priceId: "pipeline_builder_monthly",
-    popularBadge: "90% of serious operators choose this",
+    popularBadge: "90% of operators choose this",
     guarantee:
       "3 to 5 new jobs in your first 30 days, guaranteed — or your money back.",
     guaranteeNote:
