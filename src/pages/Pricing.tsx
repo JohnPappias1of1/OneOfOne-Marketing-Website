@@ -34,6 +34,10 @@ const plans: Plan[] = [
       "You're already getting found online. This makes sure every one of those leads actually reaches you.",
     price: 347,
     priceId: "solo_operator_monthly",
+    guarantee:
+      "3 to 5 new jobs in your first 30 days, guaranteed — or your money back.",
+    guaranteeNote:
+      "Capture system, not lead gen. We convert your existing organic traffic — not cold audiences.",
     bestFor: [
       "1-truck operations under 10 Google reviews",
       "Newer businesses getting found but not converting",
@@ -63,7 +67,7 @@ const plans: Plan[] = [
     priceId: "pipeline_builder_monthly",
     popularBadge: "90% of serious operators choose this",
     guarantee:
-      "Your organic traffic is already generating leads you're missing. We'll prove it — 3 to 5 captured in your first 30 days, or we work free until we do.",
+      "3 to 5 new jobs in your first 30 days, guaranteed — or your money back.",
     guaranteeNote:
       "Capture system, not lead gen. We convert your existing organic traffic — not cold audiences.",
     bestFor: [
