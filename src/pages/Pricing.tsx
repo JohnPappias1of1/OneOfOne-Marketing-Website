@@ -35,7 +35,7 @@ const plans: Plan[] = [
     price: 347,
     priceId: "solo_operator_monthly",
     guarantee:
-      "3 to 5 new jobs in your first 30 days, guaranteed — or your money back.",
+      "3 to 5 recaptured leads in your first 30 days, guaranteed — or your money back.",
     guaranteeNote:
       "Capture system, not lead gen. We convert your existing organic traffic — not cold audiences.",
     bestFor: [
@@ -68,7 +68,7 @@ const plans: Plan[] = [
     priceId: "pipeline_builder_monthly",
     popularBadge: "90% of operators choose this",
     guarantee:
-      "3 to 5 new jobs in your first 30 days, guaranteed — or your money back.",
+      "3 to 5 recaptured leads in your first 30 days, guaranteed — or your money back.",
     guaranteeNote:
       "Capture system, not lead gen. We convert your existing organic traffic — not cold audiences.",
     bestFor: [
@@ -82,7 +82,6 @@ const plans: Plan[] = [
     features: [
       { label: "Everything in The Solo Operator" },
       { label: "AI receptionist answers, qualifies, and books organic leads 24/7 — even when you're on a job", highlight: true },
-      { label: "Missed-call text-back in under 60 seconds — before the lead calls your competitor", highlight: true },
       { label: "Full automation sequences nurture every captured lead until they book" },
       { label: "Advanced review funnel with filtering — only 5-star experiences go public" },
       { label: "Priority support — real humans, fast responses" },
