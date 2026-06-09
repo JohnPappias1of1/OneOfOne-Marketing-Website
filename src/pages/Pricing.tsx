@@ -47,6 +47,7 @@ const plans: Plan[] = [
     featuresIntro:
       "Six pieces that work together as one system — so organic leads find you, reach you, and don't slip through the cracks.",
     features: [
+      { label: "Missed-call auto text-back in under 60 seconds — before the lead calls your competitor", highlight: true },
       { label: "Custom website built to turn organic visitors into booked calls" },
       { label: "Live chat widget captures leads while you're on the job" },
       { label: "Lead capture form so no overnight inquiry slips through" },
