@@ -4,11 +4,11 @@ import { SEOHead } from "@/components/seo/SEOHead";
 
 const BookNow = () => {
   useEffect(() => {
-    const scriptId = "ghl-form-embed-js";
+    const scriptId = "ghl-booking-embed-js";
     if (!document.getElementById(scriptId)) {
       const script = document.createElement("script");
       script.id = scriptId;
-      script.src = "https://api.oneofonesystems.com/js/form_embed.js";
+      script.src = "https://go.oneofonesystems.com/js/form_embed.js";
       script.async = true;
       document.body.appendChild(script);
     }
@@ -34,10 +34,10 @@ const BookNow = () => {
             </div>
             <div className="max-w-4xl mx-auto">
               <iframe
-                src="https://api.oneofonesystems.com/widget/booking/uNDDgOE7bK1v2TpURbK3"
+                src="https://go.oneofonesystems.com/widget/booking/rfSGgAr2Jw5gsrQNmPrw"
                 style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "1000px" }}
                 scrolling="no"
-                id="booking-page-uNDDgOE7bK1v2TpURbK3"
+                id="booking-page-rfSGgAr2Jw5gsrQNmPrw"
                 title="Book a Strategy Call"
               />
             </div>
