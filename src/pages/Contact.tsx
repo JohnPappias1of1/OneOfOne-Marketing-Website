@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
@@ -26,6 +27,23 @@ const benefits = [
 ];
 
 export default function ContactPage() {
+  useEffect(() => {
+    if (!document.getElementById("calendly-widget-css")) {
+      const link = document.createElement("link");
+      link.id = "calendly-widget-css";
+      link.rel = "stylesheet";
+      link.href = "https://assets.calendly.com/assets/external/widget.css";
+      document.head.appendChild(link);
+    }
+    if (!document.getElementById("calendly-widget-js")) {
+      const script = document.createElement("script");
+      script.id = "calendly-widget-js";
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <>
       <SEOHead
