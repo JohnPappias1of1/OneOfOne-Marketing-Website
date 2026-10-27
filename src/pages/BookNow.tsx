@@ -4,11 +4,11 @@ import { SEOHead } from "@/components/seo/SEOHead";
 
 const BookNow = () => {
   useEffect(() => {
-    const scriptId = "ghl-form-embed-js";
+    const scriptId = "ghl-booking-embed-js";
     if (!document.getElementById(scriptId)) {
       const script = document.createElement("script");
       script.id = scriptId;
-      script.src = "https://api.oneofonesystems.com/js/form_embed.js";
+      script.src = "https://go.oneofonesystems.com/js/form_embed.js";
       script.async = true;
       document.body.appendChild(script);
     }
