@@ -32,7 +32,7 @@ const plans: Plan[] = [
     name: "The Solo Operator",
     tagline:
       "You're already getting found online. This makes sure every one of those leads actually reaches you.",
-    price: 347,
+    price: 397,
     priceId: "solo_operator_monthly",
     guarantee:
       "3 to 5 recaptured leads in your first 30 days, guaranteed — or your money back.",
@@ -279,7 +279,7 @@ export default function PricingPage() {
     <>
       <SEOHead
         title="Pricing | OneofOne Marketing Capture & Growth Systems"
-        description="Capture and convert the organic leads you're already getting. Three tiers from $347/mo — Solo Operator, Pipeline Builder, and Market Dominator."
+        description="Capture and convert the organic leads you're already getting. Three tiers from $397/mo — Solo Operator, Pipeline Builder, and Market Dominator."
         canonical="/pricing"
       />
       <Layout>
