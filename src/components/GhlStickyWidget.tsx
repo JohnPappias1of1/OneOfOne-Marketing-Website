@@ -5,6 +5,7 @@ export function GhlStickyWidget() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    if (!isOpen) return;
     const scriptId = "ghl-form-embed-js";
     if (!document.getElementById(scriptId)) {
       const script = document.createElement("script");
@@ -13,7 +14,7 @@ export function GhlStickyWidget() {
       script.async = true;
       document.body.appendChild(script);
     }
-  }, []);
+  }, [isOpen]);
 
   return (
     <div className="fixed bottom-6 left-6 z-50">
