@@ -32,7 +32,7 @@ const plans: Plan[] = [
     name: "The Solo Operator",
     tagline:
       "You're already getting found online. This makes sure every one of those leads actually reaches you.",
-    price: 397,
+    price: 497,
     priceId: "solo_operator_monthly",
     guarantee:
       "3 to 5 recaptured leads in your first 30 days, guaranteed — or your money back.",
@@ -64,7 +64,7 @@ const plans: Plan[] = [
     name: "The Pipeline Builder",
     tagline:
       "Your organic traffic is already sending you leads. This system makes sure not a single one goes unanswered.",
-    price: 647,
+    price: 897,
     priceId: "pipeline_builder_monthly",
     popularBadge: "90% of operators choose this",
     guarantee:
