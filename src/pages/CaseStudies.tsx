@@ -33,6 +33,7 @@ const caseStudies: CaseStudy[] = [
     approach:
       "Deployed the full capture system: a conversion-focused website with instant quote request, a live chat widget that grabs leads while the crew is on a job, and a lead capture form wired into GoHighLevel with SMS + email follow-up. Missed-call auto text-back fires in under 60 seconds so no inbound call goes cold, automated Google review requests go out after every completed job, and spam filtering keeps junk leads out of the pipeline. Currently layering in local search visibility.",
     outcomes: [
+      { metric: "+$30K", label: "Added revenue in first 2–3 months" },
       { metric: "<2 min", label: "Avg. lead response time" },
       { metric: "100%", label: "Inbound calls captured" },
       { metric: "1 hub", label: "All leads in one CRM" },
