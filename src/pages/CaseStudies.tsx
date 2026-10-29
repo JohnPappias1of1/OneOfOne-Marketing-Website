@@ -1,8 +1,9 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead, generateCollectionPageSchema } from "@/components/seo/SEOHead";
 import { Link } from "react-router-dom";
-import { ArrowRight, TrendingUp, Quote, MapPin, Calendar, Info } from "lucide-react";
+import { ArrowRight, TrendingUp, Quote, MapPin, Calendar, Info, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getVideoEmbedUrl } from "@/lib/loom";
 
 type CaseStudy = {
   id: number;
@@ -17,6 +18,9 @@ type CaseStudy = {
   honestNote?: string;
   testimonial?: string;
   testimonialAuthor?: string;
+  /** Video testimonial URL (Loom, YouTube, or Vimeo). Rendered as an embedded player. */
+  videoUrl?: string;
+  videoAuthor?: string;
   services: string[];
   timeline: string;
 };
