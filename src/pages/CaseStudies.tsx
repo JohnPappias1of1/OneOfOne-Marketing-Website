@@ -58,7 +58,7 @@ const caseStudies: CaseStudy[] = [
     id: 2,
     client: "Legacy Climate Systems",
     industry: "HVAC",
-    location: "Plano, TX",
+    location: "Mesquite, TX",
     period: "2024 engagement",
     problem:
       "Outdated site, almost no inbound from Google, and a sales process that depended on the owner answering his cell phone. Roughly 10–15 service calls per month and no clear picture of where leads were coming from.",
