@@ -268,6 +268,31 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
+        {/* Solo Operator tie-in */}
+        <section className="pb-8">
+          <div className="section-container">
+            <div className="glass-card p-8 max-w-3xl mx-auto text-center">
+              <p className="text-primary text-sm font-semibold tracking-wider uppercase mb-3">
+                The system behind the results
+              </p>
+              <h3 className="font-display text-2xl font-bold mb-4">
+                Every engagement above runs on our{" "}
+                <span className="gradient-text">Solo Operator</span> capture layer
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Conversion website, live chat widget, missed-call auto text-back, automated Google review
+                requests, spam filtering, and every lead in one app. The same system we install in week one.
+              </p>
+              <Link to="/pricing">
+                <Button variant="outline" className="btn-primary">
+                  See the Solo Operator Package
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="py-20 lg:py-28 bg-card">
           <div className="section-container text-center">
