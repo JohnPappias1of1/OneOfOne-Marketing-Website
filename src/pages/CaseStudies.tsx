@@ -56,8 +56,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: 2,
-    client: "HVAC contractor (DFW metro)",
-    anonymized: true,
+    client: "Legacy Climate Systems",
     industry: "HVAC",
     location: "Plano, TX",
     period: "2024 engagement",
