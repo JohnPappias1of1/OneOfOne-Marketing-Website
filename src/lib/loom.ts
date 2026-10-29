@@ -16,3 +16,29 @@ export function getLoomEmbedUrl(input: string): string | null {
   }
   return null;
 }
+
+// Convert Loom, YouTube, or Vimeo URLs to embed form.
+// Returns null when the URL isn't a recognized video host.
+export function getVideoEmbedUrl(input: string): string | null {
+  if (!input) return null;
+  const trimmed = input.trim();
+
+  const loom = getLoomEmbedUrl(trimmed);
+  if (loom) return loom;
+
+  // YouTube: watch?v=, youtu.be/, /shorts/, /embed/
+  const yt = trimmed.match(
+    /(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{6,})/
+  );
+  if (yt) {
+    return `https://www.youtube.com/embed/${yt[1]}`;
+  }
+
+  // Vimeo: vimeo.com/<id>
+  const vimeo = trimmed.match(/vimeo\.com\/(\d+)/);
+  if (vimeo) {
+    return `https://player.vimeo.com/video/${vimeo[1]}`;
+  }
+
+  return null;
+}
