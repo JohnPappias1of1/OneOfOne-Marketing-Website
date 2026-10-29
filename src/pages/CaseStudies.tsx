@@ -70,7 +70,7 @@ const caseStudies: CaseStudy[] = [
       { metric: "Top 3", label: "Map pack for core terms" },
     ],
     honestNote:
-      "Took about 60 days before SEO contributed meaningfully — paid traffic carried the first month. Client name kept private at their request.",
+      "Took about 60 days before SEO contributed meaningfully — paid traffic carried the first month.",
     services: ["Website", "Local SEO", "Google LSA"],
     timeline: "~6 months",
   },
