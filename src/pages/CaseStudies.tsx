@@ -29,9 +29,9 @@ const caseStudies: CaseStudy[] = [
     location: "Middle Island, Long Island, NY",
     period: "Active engagement — started 2025",
     problem:
-      "Strong word-of-mouth business with no real digital front door. Quotes were getting lost in text threads, missed calls were going un-followed-up, and there was no way to track which marketing dollars were actually producing jobs.",
+      "Strong word-of-mouth business with no real digital front door. Quotes were getting lost in text threads, missed calls were going un-followed-up, spam inquiries were eating time, and there was no way to track which marketing dollars were actually producing jobs.",
     approach:
-      "Built a conversion-focused site with instant quote request, wired the lead form into GoHighLevel with SMS + email follow-up, and set up a missed-call-text-back automation so no inbound call goes cold. Currently layering in local SEO and review generation.",
+      "Deployed the full capture system: a conversion-focused website with instant quote request, a live chat widget that grabs leads while the crew is on a job, and a lead capture form wired into GoHighLevel with SMS + email follow-up. Missed-call auto text-back fires in under 60 seconds so no inbound call goes cold, automated Google review requests go out after every completed job, and spam filtering keeps junk leads out of the pipeline. Currently layering in local search visibility.",
     outcomes: [
       { metric: "<2 min", label: "Avg. lead response time" },
       { metric: "100%", label: "Inbound calls captured" },
@@ -39,8 +39,14 @@ const caseStudies: CaseStudy[] = [
       { metric: "Live", label: "Site + automations shipped" },
     ],
     honestNote:
-      "This is an active build — we're 90 days in. Lead capture and follow-up are live; SEO and review numbers are still ramping. Happy to walk through the actual GHL dashboard on a call.",
-    services: ["Website", "Lead Automation", "GHL Setup", "Local SEO"],
+      "This is an active build — we're 90 days in. Lead capture, text-back, and review automation are live; SEO and review volume are still ramping. Happy to walk through the actual GHL dashboard on a call.",
+    services: [
+      "Website",
+      "Chat Widget",
+      "Missed-Call Text-Back",
+      "Google Review Automation",
+      "Spam Filtering",
+    ],
     timeline: "Ongoing",
   },
   {
@@ -259,6 +265,31 @@ export default function CaseStudiesPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Solo Operator tie-in */}
+        <section className="pb-8">
+          <div className="section-container">
+            <div className="glass-card p-8 max-w-3xl mx-auto text-center">
+              <p className="text-primary text-sm font-semibold tracking-wider uppercase mb-3">
+                The system behind the results
+              </p>
+              <h3 className="font-display text-2xl font-bold mb-4">
+                Every engagement above runs on our{" "}
+                <span className="gradient-text">Solo Operator</span> capture layer
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Conversion website, live chat widget, missed-call auto text-back, automated Google review
+                requests, spam filtering, and every lead in one app. The same system we install in week one.
+              </p>
+              <Link to="/pricing">
+                <Button variant="outline" className="btn-primary">
+                  See the Solo Operator Package
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </section>
 
