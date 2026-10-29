@@ -230,6 +230,27 @@ export default function CaseStudiesPage() {
                     </div>
                   )}
 
+                  {/* Video testimonial */}
+                  {study.videoUrl && getVideoEmbedUrl(study.videoUrl) && (
+                    <div className="p-6 rounded-2xl border border-primary/20 bg-card mb-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <PlayCircle className="w-5 h-5 text-primary" />
+                        <h4 className="font-display font-semibold">
+                          Video Testimonial{study.videoAuthor ? ` — ${study.videoAuthor}` : ""}
+                        </h4>
+                      </div>
+                      <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-border">
+                        <iframe
+                          src={getVideoEmbedUrl(study.videoUrl)!}
+                          title={`Video testimonial — ${study.client}`}
+                          className="absolute inset-0 w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    </div>
+                  )}
+
                   {/* Testimonial */}
                   {study.testimonial && (
                     <div className="p-6 rounded-2xl border border-border bg-card">
