@@ -1,8 +1,9 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead, generateCollectionPageSchema } from "@/components/seo/SEOHead";
 import { Link } from "react-router-dom";
-import { ArrowRight, TrendingUp, Quote, MapPin, Calendar, Info } from "lucide-react";
+import { ArrowRight, TrendingUp, Quote, MapPin, Calendar, Info, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getVideoEmbedUrl } from "@/lib/loom";
 
 type CaseStudy = {
   id: number;
@@ -17,6 +18,9 @@ type CaseStudy = {
   honestNote?: string;
   testimonial?: string;
   testimonialAuthor?: string;
+  /** Video testimonial URL (Loom, YouTube, or Vimeo). Rendered as an embedded player. */
+  videoUrl?: string;
+  videoAuthor?: string;
   services: string[];
   timeline: string;
 };
@@ -223,6 +227,27 @@ export default function CaseStudiesPage() {
                         Straight talk
                       </h4>
                       <p className="text-sm text-foreground/80">{study.honestNote}</p>
+                    </div>
+                  )}
+
+                  {/* Video testimonial */}
+                  {study.videoUrl && getVideoEmbedUrl(study.videoUrl) && (
+                    <div className="p-6 rounded-2xl border border-primary/20 bg-card mb-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <PlayCircle className="w-5 h-5 text-primary" />
+                        <h4 className="font-display font-semibold">
+                          Video Testimonial{study.videoAuthor ? ` — ${study.videoAuthor}` : ""}
+                        </h4>
+                      </div>
+                      <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-border">
+                        <iframe
+                          src={getVideoEmbedUrl(study.videoUrl)!}
+                          title={`Video testimonial — ${study.client}`}
+                          className="absolute inset-0 w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
                     </div>
                   )}
 
