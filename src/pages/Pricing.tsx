@@ -82,6 +82,7 @@ const plans: Plan[] = [
     features: [
       { label: "Everything in The Solo Operator" },
       { label: "Automated Google Map Pack Activity: 1 weekly optimized profile post to keep Google’s algorithm prioritizing your map listing.", highlight: true },
+      { label: "Next-Gen AI Search Readiness: We structure your profile, reviews, and site so tools like ChatGPT, Apple Siri, and Google AI Overviews recommend your business first." },
       { label: "AI-Powered Review Management: Automated, context-aware replies to every Google review loaded with local SEO keywords." },
       { label: "Past-Client Reactivation Engine: Automated SMS sequences that wake up your dormant customer list to generate fast, new bookings." },
       { label: "2-Way Calendar Booking System: Website visitors and missed-call leads can book directly onto your iPhone or Google calendar without phone tag." },
