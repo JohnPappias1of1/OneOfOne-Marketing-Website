@@ -297,15 +297,15 @@ ${preview.client_name}`}
                   },
                   {
                     icon: Bot,
-                    tag: "🤖 AI Receptionist (optional add-on)",
-                    headline: "A $50K Receptionist For Less Than $20/Day",
-                    why: "Answers every call. Qualifies every lead. Books every appointment. Even at 11pm on a Sunday.",
+                    tag: "💬 24/7 Chat Capture",
+                    headline: "Catch The 9pm Lead You'd Normally Miss",
+                    why: "The chat widget grabs name, number, and job details while you're on a roof or at dinner — every lead lands in one app.",
                   },
                   {
                     icon: MapPin,
-                    tag: "📍 Local SEO Optimized",
-                    headline: "Show Up Where The Money Is",
-                    why: "Built from day one to rank in the Google Map Pack — because nobody scrolls to page two.",
+                    tag: "📍 Local Search Visibility",
+                    headline: "Show Up When Neighbors Search",
+                    why: "Set up from day one so nearby homeowners find you on Google — and every visit gets turned into a booked call.",
                   },
                 ].map((item) => (
                   <div key={item.tag} className="glass-card p-5 hover:border-primary/40 transition-colors">
