@@ -57,6 +57,7 @@ const plans: Plan[] = [
     ],
     ctaLabel: "Start Capturing",
     ctaNote: "Setup included · Live in 4–5 days · No contracts",
+    popularBadge: "Most operators start here — add Ads management when you're ready to scale",
   },
   {
     id: "pipeline_builder",
@@ -66,7 +67,6 @@ const plans: Plan[] = [
       "Your organic traffic is already sending you leads. This system makes sure not a single one goes unanswered.",
     price: 897,
     priceId: "pipeline_builder_monthly",
-    popularBadge: "90% of operators choose this",
     guarantee:
       "3 to 5 recaptured leads in your first 30 days, guaranteed — or your money back.",
     guaranteeNote:
@@ -110,7 +110,7 @@ const plans: Plan[] = [
       "The full system — capture everything coming in organically, then add paid channels to bring more in on top of it.",
     features: [
       { label: "Everything in The Pipeline Builder" },
-      { label: "LSA (Local Service Ads) setup and management — highest-intent paid channel for trades, you pay per verified lead", highlight: true },
+      { label: "Google Local Services Ads (LSA) with the \"Google Guaranteed\" badge — setup and management of the highest-intent paid channel for trades, you pay per verified lead", highlight: true },
       { label: "Google Search Ads layered on top of LSA to capture demand LSA misses", highlight: true },
       { label: "Facebook retargeting for visitors who found you but didn't book — follows them until they do", highlight: true },
       { label: "Full SEO optimization — rank above competitors organically while ads run alongside" },
@@ -133,7 +133,7 @@ function PlanCard({
   onSubscribe: (plan: Plan) => void;
   isLoading: boolean;
 }) {
-  const isPopular = plan.id === "pipeline_builder";
+  const isPopular = plan.id === "solo_operator";
 
   return (
     <div
