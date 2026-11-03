@@ -61,10 +61,10 @@ const plans: Plan[] = [
   },
   {
     id: "pipeline_builder",
-    tier: "Capture — Tier 2",
-    name: "The Pipeline Builder",
+    tier: "Capture + Growth — Tier 2",
+    name: "The Booked Solid",
     tagline:
-      "Your organic traffic is already sending you leads. This system makes sure not a single one goes unanswered.",
+      "While you're on the job, we keep next month's schedule full — map rankings, past customers, and referrals working for you on autopilot.",
     price: 897,
     priceId: "pipeline_builder_monthly",
     guarantee:
@@ -91,7 +91,7 @@ const plans: Plan[] = [
       { label: "Monthly Performance Report: Calls, reviews, map rank, and reactivated jobs delivered to your inbox automatically — no phone calls required." },
       { label: "Priority support — real humans, fast responses" },
     ],
-    ctaLabel: "Build My Pipeline",
+    ctaLabel: "Get Booked Solid",
     ctaNote: "Setup included · 30-day capture guarantee · No contracts",
   },
   {
@@ -111,7 +111,7 @@ const plans: Plan[] = [
     featuresIntro:
       "The full system — capture everything coming in organically, then add paid channels to bring more in on top of it.",
     features: [
-      { label: "Everything in The Pipeline Builder" },
+      { label: "Everything in The Booked Solid" },
       { label: "Google Local Services Ads (LSA) with the \"Google Guaranteed\" badge — setup and management of the highest-intent paid channel for trades, you pay per verified lead", highlight: true },
       { label: "Google Search Ads layered on top of LSA to capture demand LSA misses", highlight: true },
       { label: "Facebook retargeting for visitors who found you but didn't book — follows them until they do", highlight: true },
@@ -284,7 +284,7 @@ export default function PricingPage() {
     <>
       <SEOHead
         title="Pricing | OneofOne Marketing Capture & Growth Systems"
-        description="Capture and convert the organic leads you're already getting. Three tiers from $397/mo — Solo Operator, Pipeline Builder, and Market Dominator."
+        description="Capture and convert the organic leads you're already getting. Three tiers from $397/mo — Solo Operator, Booked Solid, and Market Dominator."
         canonical="/pricing"
       />
       <Layout>
