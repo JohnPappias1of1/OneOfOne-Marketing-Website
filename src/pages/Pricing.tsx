@@ -78,12 +78,14 @@ const plans: Plan[] = [
       "Operators ready to stop leaking revenue they're already earning",
     ],
     featuresIntro:
-      "Everything in Solo Operator plus the response layer — leads don't just reach you, they get answered instantly before they call your competitor.",
+      "Everything in Solo Operator plus the automated growth layer — we actively optimize your local SEO and reactivate past clients so your pipeline stays full on autopilot.",
     features: [
       { label: "Everything in The Solo Operator" },
-      { label: "AI receptionist answers, qualifies, and books organic leads 24/7 — even when you're on a job", highlight: true },
-      { label: "Full automation sequences nurture every captured lead until they book" },
-      { label: "Advanced review funnel with filtering — only 5-star experiences go public" },
+      { label: "Automated Google Map Pack Activity: 1 weekly optimized profile post to keep Google’s algorithm prioritizing your map listing.", highlight: true },
+      { label: "AI-Powered Review Management: Automated, context-aware replies to every Google review loaded with local SEO keywords." },
+      { label: "Past-Client Reactivation Engine: Automated SMS sequences that wake up your dormant customer list to generate fast, new bookings." },
+      { label: "2-Way Calendar Booking System: Website visitors and missed-call leads can book directly onto your iPhone or Google calendar without phone tag." },
+      { label: "365-Day Client Nurture: Automated multi-touch seasonal check-ins that win repeat jobs and long-term loyalty." },
       { label: "Priority support — real humans, fast responses" },
     ],
     ctaLabel: "Build My Pipeline",
