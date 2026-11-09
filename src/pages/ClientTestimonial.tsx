@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, PlayCircle, Quote, Star } from "lucide-react";
+import { ArrowLeft, Play, PlayCircle, Quote, Star } from "lucide-react";
 import { getVideoEmbedUrl } from "@/lib/loom";
 
 /**
