@@ -8,7 +8,7 @@ import { TapToPlayVideo } from "@/components/testimonials/TapToPlayVideo";
  * Unlisted client testimonial page.
  * Not linked from the nav, footer, sitemap, or llms.txt — share the URL directly.
  */
-const TESTIMONIAL_VIDEO_URL = "https://youtube.com/shorts/V-2HPmDd-cw";
+const TESTIMONIAL_VIDEO_URL = "https://youtube.com/shorts/bBVIrV-aj9s";
 const embedUrl = getVideoEmbedUrl(TESTIMONIAL_VIDEO_URL);
 const videoId = TESTIMONIAL_VIDEO_URL.match(/(?:shorts\/|watch\?v=|youtu\.be\/)([\w-]+)/)?.[1];
 const thumbnailUrl = videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : null;
