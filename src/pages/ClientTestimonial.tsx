@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Play, PlayCircle, Quote, Star } from "lucide-react";
+import { ArrowLeft, PlayCircle, Quote, Star } from "lucide-react";
 import { getVideoEmbedUrl } from "@/lib/loom";
+import { TapToPlayVideo } from "@/components/testimonials/TapToPlayVideo";
 
 /**
  * Unlisted client testimonial page.
