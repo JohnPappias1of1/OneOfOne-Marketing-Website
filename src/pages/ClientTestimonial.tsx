@@ -14,10 +14,7 @@ const videoId = TESTIMONIAL_VIDEO_URL.match(/(?:shorts\/|watch\?v=|youtu\.be\/)(
 const thumbnailUrl = videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : null;
 const largeThumbnailUrl = videoId ? `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg` : null;
 
-const ClientTestimonial = () => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-
-  return (
+const ClientTestimonial = () => (
   <>
     <Helmet>
       <title>Client Testimonial | OneOfOneSystems LLC</title>
