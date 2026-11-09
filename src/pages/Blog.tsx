@@ -73,7 +73,7 @@ export default function BlogPage() {
                 <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
                   We're working on creating valuable content to help you grow your business. In the meantime, book a call to get personalized insights.
                 </p>
-                <Link to="/contact">
+                <Link to="/book-now">
                   <Button className="btn-primary">
                     Book a Free Strategy Call
                     <ArrowRight className="w-4 h-4 ml-2" />

@@ -10,10 +10,8 @@ const navigation = {
     { name: "AI Receptionist", href: "/services#ai" },
   ],
   company: [
-    { name: "About Us", href: "/about" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },

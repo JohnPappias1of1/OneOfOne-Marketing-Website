@@ -146,7 +146,7 @@ export default function ServicesPage() {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
               We don't just offer services—we build complete acquisition systems that work together to generate leads and grow revenue.
             </p>
-            <Link to="/contact">
+            <Link to="/book-now">
               <Button className="btn-primary">
                 Book a Free Strategy Call
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -207,7 +207,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <Link to="/contact">
+                  <Link to="/book-now">
                     <Button className="btn-primary">
                       Get Started with {service.title.split(" ")[0]}
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -262,7 +262,7 @@ export default function ServicesPage() {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
               Let's discuss which services make sense for your business and goals.
             </p>
-            <Link to="/contact">
+            <Link to="/book-now">
               <Button className="btn-primary text-base">
                 Book Your Free Strategy Call
                 <ArrowRight className="w-4 h-4 ml-2" />

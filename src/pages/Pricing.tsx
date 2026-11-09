@@ -336,7 +336,7 @@ export default function PricingPage() {
                 </p>
               </div>
               <Link
-                to="/contact"
+                to="/book-now"
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-border text-foreground/80 text-sm font-bold hover:bg-muted transition-colors whitespace-nowrap"
               >
                 Book a strategy call

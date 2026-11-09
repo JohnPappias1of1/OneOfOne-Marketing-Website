@@ -61,7 +61,7 @@ export function HeroSection() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact">
+              <Link to="/book-now">
                 <Button className="btn-primary group">
                   Book a Free Strategy Call
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

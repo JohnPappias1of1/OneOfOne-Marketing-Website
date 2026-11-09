@@ -328,7 +328,7 @@ export default function CaseStudiesPage() {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
               Book a call and we'll walk through a live client account — leads, response times, the whole pipeline.
             </p>
-            <Link to="/contact">
+            <Link to="/book-now">
               <Button className="btn-primary text-base">
                 Book Your Free Strategy Call
                 <ArrowRight className="w-4 h-4 ml-2" />

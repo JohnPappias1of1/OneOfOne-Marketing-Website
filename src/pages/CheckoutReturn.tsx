@@ -29,7 +29,7 @@ export default function CheckoutReturn() {
               <Link to="/">
                 <Button variant="outline">Back to home</Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/book-now">
                 <Button className="btn-primary">Contact us</Button>
               </Link>
             </div>
