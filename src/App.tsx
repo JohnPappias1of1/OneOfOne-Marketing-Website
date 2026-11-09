@@ -104,10 +104,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
-          <Suspense fallback={null}>
-            <ChatbotWidget />
-            <GhlStickyWidget />
-          </Suspense>
+          <GlobalWidgets />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

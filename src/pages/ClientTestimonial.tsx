@@ -28,7 +28,7 @@ const ClientTestimonial = () => {
 
     <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Ambient gold glow */}
-      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-primary/10 blur-[140px]" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[420px] h-[420px] sm:w-[700px] sm:h-[700px] rounded-full bg-primary/10 blur-3xl" />
 
       <div className="relative section-container py-10 min-h-screen flex flex-col">
         {/* Top bar */}
@@ -69,19 +69,52 @@ const ClientTestimonial = () => {
             A quick word from a client about what it's like working with OneOfOne.
           </p>
 
-          {/* Vertical video frame (YouTube Short) */}
+          {/* Load only a thumbnail until the visitor asks to play the video. */}
           {embedUrl ? (
             <div className="relative w-full max-w-[340px]">
               <div className="absolute -inset-4 rounded-[2.5rem] bg-primary/15 blur-2xl" />
-              <div className="relative rounded-[2.5rem] border border-primary/30 bg-card/80 backdrop-blur-sm p-3 shadow-2xl">
-                <div className="relative w-full aspect-[9/16] rounded-[2rem] overflow-hidden bg-black">
-                  <iframe
-                    src={embedUrl}
-                    title="Client video testimonial"
-                    className="absolute inset-0 w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+              <div className="relative rounded-[2.5rem] border border-primary/30 bg-card/80 p-3 shadow-2xl">
+                <div className="relative w-full aspect-[9/16] rounded-[2rem] overflow-hidden bg-secondary">
+                  {isVideoPlaying ? (
+                    <iframe
+                      src={`${embedUrl.replace("www.youtube.com", "www.youtube-nocookie.com")}?autoplay=1&rel=0&playsinline=1`}
+                      title="Client video testimonial"
+                      className="absolute inset-0 w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setIsVideoPlaying(true)}
+                      className="group absolute inset-0 w-full h-full"
+                      aria-label="Play client testimonial video"
+                    >
+                      {thumbnailUrl && (
+                        <img
+                          src={thumbnailUrl}
+                          srcSet={largeThumbnailUrl ? `${thumbnailUrl} 480w, ${largeThumbnailUrl} 1280w` : undefined}
+                          sizes="340px"
+                          width="480"
+                          height="360"
+                          alt=""
+                          fetchPriority="high"
+                          decoding="async"
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                      )}
+                      <span className="absolute inset-0 bg-background/10 transition-colors group-hover:bg-background/0" />
+                      <span className="absolute inset-0 flex items-center justify-center">
+                        <span className="w-20 h-20 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-xl transition-transform group-hover:scale-105">
+                          <Play className="w-9 h-9 ml-1 fill-current" aria-hidden="true" />
+                        </span>
+                      </span>
+                      <span className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full bg-background/85 px-4 py-2 text-sm font-semibold text-foreground whitespace-nowrap">
+                        Tap to play
+                      </span>
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
