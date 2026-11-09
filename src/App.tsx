@@ -3,12 +3,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
 import { PaymentTestModeBanner } from "./components/PaymentTestModeBanner";
 
+const Index = lazy(() => import("./pages/Index"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 const Services = lazy(() => import("./pages/Services"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const Pricing = lazy(() => import("./pages/Pricing"));
@@ -48,6 +48,20 @@ const PageLoader = () => (
     <div className="h-8 w-8 rounded-full border-2 border-primary border-t-transparent animate-spin" />
   </div>
 );
+
+const GlobalWidgets = () => {
+  const { pathname } = useLocation();
+
+  // Keep the shared testimonial page focused and avoid loading unused integrations.
+  if (pathname === "/client-testimonial") return null;
+
+  return (
+    <Suspense fallback={null}>
+      <ChatbotWidget />
+      <GhlStickyWidget />
+    </Suspense>
+  );
+};
 
 const App = () => (
   <HelmetProvider>
@@ -90,10 +104,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
-          <Suspense fallback={null}>
-            <ChatbotWidget />
-            <GhlStickyWidget />
-          </Suspense>
+          <GlobalWidgets />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
