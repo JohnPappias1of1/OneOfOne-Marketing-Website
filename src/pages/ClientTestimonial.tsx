@@ -10,13 +10,20 @@ import { getVideoEmbedUrl } from "@/lib/loom";
  */
 const TESTIMONIAL_VIDEO_URL = "https://youtube.com/shorts/V-2HPmDd-cw";
 const embedUrl = getVideoEmbedUrl(TESTIMONIAL_VIDEO_URL);
+const videoId = TESTIMONIAL_VIDEO_URL.match(/(?:shorts\/|watch\?v=|youtu\.be\/)([\w-]+)/)?.[1];
+const thumbnailUrl = videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : null;
+const largeThumbnailUrl = videoId ? `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg` : null;
 
-const ClientTestimonial = () => (
+const ClientTestimonial = () => {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  return (
   <>
     <Helmet>
       <title>Client Testimonial | OneOfOneSystems LLC</title>
       <meta name="description" content="A client testimonial from OneOfOneSystems LLC." />
       <meta name="robots" content="noindex, nofollow" />
+      {thumbnailUrl && <link rel="preconnect" href="https://i.ytimg.com" />}
     </Helmet>
 
     <div className="min-h-screen bg-background relative overflow-hidden">

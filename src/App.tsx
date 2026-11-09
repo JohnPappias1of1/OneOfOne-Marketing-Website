@@ -49,6 +49,20 @@ const PageLoader = () => (
   </div>
 );
 
+const GlobalWidgets = () => {
+  const { pathname } = useLocation();
+
+  // Keep the shared testimonial page focused and avoid loading unused integrations.
+  if (pathname === "/client-testimonial") return null;
+
+  return (
+    <Suspense fallback={null}>
+      <ChatbotWidget />
+      <GhlStickyWidget />
+    </Suspense>
+  );
+};
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
