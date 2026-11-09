@@ -33,6 +33,7 @@ const WebsitePreview = lazy(() => import("./pages/WebsitePreview"));
 const GhlWebsitePreview = lazy(() => import("./pages/GhlWebsitePreview"));
 const OurWork = lazy(() => import("./pages/OurWork"));
 const CheckoutReturn = lazy(() => import("./pages/CheckoutReturn"));
+const ClientTestimonial = lazy(() => import("./pages/ClientTestimonial"));
 const ChatbotWidget = lazy(() =>
   import("./components/chatbot/ChatbotWidget").then((m) => ({ default: m.ChatbotWidget }))
 );
@@ -85,6 +86,7 @@ const App = () => (
               <Route path="/ghl-contact" element={<GhlContact />} />
               <Route path="/book-now" element={<BookNow />} />
               <Route path="/checkout/return" element={<CheckoutReturn />} />
+              <Route path="/client-testimonial" element={<ClientTestimonial />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
