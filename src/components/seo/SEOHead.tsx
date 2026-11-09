@@ -7,6 +7,8 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   schema?: object;
+  /** Keep a page out of search engines (unlisted/private pages). */
+  noindex?: boolean;
 }
 
 export function SEOHead({
@@ -16,6 +18,7 @@ export function SEOHead({
   ogImage = "/og-image.png",
   ogType = "website",
   schema,
+  noindex = false,
 }: SEOHeadProps) {
   const siteName = "OneOfOneSystems LLC";
   // Use title as-is. Pages own their full <title> so we can keep it under 60 chars.
@@ -27,7 +30,7 @@ export function SEOHead({
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       {/* Canonical URL */}
