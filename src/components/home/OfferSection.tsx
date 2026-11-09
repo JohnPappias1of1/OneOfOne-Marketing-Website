@@ -51,7 +51,7 @@ export function OfferSection() {
                     ))}
                   </ul>
 
-                  <Link to="/contact">
+                  <Link to="/book-now">
                     <Button className="btn-primary text-base group">
                       Claim Your Free Audit
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

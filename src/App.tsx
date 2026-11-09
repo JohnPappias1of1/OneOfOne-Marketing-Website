@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -12,8 +12,6 @@ import { PaymentTestModeBanner } from "./components/PaymentTestModeBanner";
 const Services = lazy(() => import("./pages/Services"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const Pricing = lazy(() => import("./pages/Pricing"));
-const About = lazy(() => import("./pages/About"));
-const Contact = lazy(() => import("./pages/Contact"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
@@ -65,8 +63,8 @@ const App = () => (
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/our-work" element={<OurWork />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<Navigate to="/book-now" replace />} />
+              <Route path="/contact" element={<Navigate to="/book-now" replace />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />

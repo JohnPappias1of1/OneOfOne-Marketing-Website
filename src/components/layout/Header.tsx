@@ -9,8 +9,6 @@ const navigation = [
   { name: "Case Studies", href: "/case-studies" },
   { name: "Pricing", href: "/pricing" },
   { name: "Our Work", href: "/our-work" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
   { name: "SMS Updates", href: "/sms-optin" },
   { name: "Book Now", href: "/book-now" },
 ];
@@ -76,7 +74,7 @@ export function Header() {
               <Phone className="w-4 h-4" />
               <span>(972) 632-5036</span>
             </a>
-            <Link to="/contact">
+            <Link to="/book-now">
               <Button className="btn-primary text-sm">
                 Book a Free Strategy Call
               </Button>
@@ -114,7 +112,7 @@ export function Header() {
                 </Link>
               ))}
               <div className="pt-4 border-t border-border">
-                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link to="/book-now" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button className="btn-primary w-full">Book a Free Strategy Call</Button>
                 </Link>
               </div>
