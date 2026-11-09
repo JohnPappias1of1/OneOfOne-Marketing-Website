@@ -177,6 +177,7 @@ export function TapToPlayVideo({
             alt=""
             fetchPriority="high"
             decoding="async"
+            onLoad={() => setShouldPreparePlayer(true)}
             className="absolute inset-0 h-full w-full object-cover"
           />
           <span className="absolute inset-0 bg-background/10 transition-colors group-hover:bg-background/0" />
