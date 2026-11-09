@@ -117,7 +117,6 @@ const ClientTestimonial = () => (
       </div>
     </div>
   </>
-  );
-};
+);
 
 export default ClientTestimonial;
