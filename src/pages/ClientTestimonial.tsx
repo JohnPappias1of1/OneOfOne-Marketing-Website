@@ -77,7 +77,7 @@ const ClientTestimonial = () => {
                 <div className="relative w-full aspect-[9/16] rounded-[2rem] overflow-hidden bg-secondary">
                   {isVideoPlaying ? (
                     <iframe
-                      src={`${embedUrl.replace("www.youtube.com", "www.youtube-nocookie.com")}?autoplay=1&rel=0&playsinline=1`}
+                      src={`${embedUrl}?autoplay=1&rel=0&playsinline=1`}
                       title="Client video testimonial"
                       className="absolute inset-0 w-full h-full"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
